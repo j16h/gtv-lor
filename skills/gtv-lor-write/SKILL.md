@@ -1,6 +1,6 @@
 ---
 name: gtv-lor-write
-description: Prepares one UK Global Talent visa (Tech Nation) recommendation letter from scratch - interviews the author for their own view, then produces either a fact pack (facts and rules, no sample sentences, lower risk) or a draft the author must rewrite, marked with gaps to confirm, scored before handover. Part of the gtv-lor suite. Use when the user types /gtv-lor-write or asks to "write", "draft" or "start" a Global Talent LOR, or to prepare a brief or fact pack for a recommender. Do NOT use to edit an existing letter (use /gtv-lor-polish) or for other visas.
+description: "Prepares one UK Global Talent visa (Tech Nation) recommendation letter from scratch: interviews the author, then gives a fact pack (facts and rules, no sample sentences) or a draft the author rewrites, with gaps marked and a score. Part of the gtv-lor suite. Use when the user types /gtv-lor-write or asks to write, draft or brief a referee for a Global Talent LOR. Not for editing an existing letter (use /gtv-lor-polish) or other visas."
 metadata:
   author: Julian Kalichman
   version: 3.0.0
@@ -26,7 +26,7 @@ The strongest letters come from the author's answers, not the applicant's. Use R
 Ask, recommending the fact pack:
 
 - **Fact pack** (lower risk): the rules in plain words, this author's main example with numbers and evidence, relationship dates, the applicant's plans, what this letter must not repeat from the others, and the line "Please write this in your own words; letters that look templated can be treated as fraudulent." No sample sentences. Save `letters/<slug>/factpack.md`.
-- **Draft** for the author to rewrite: say once that Tech Nation calls AI-created letters unacceptable and contacts referees. Follow `drafting.md`: only facts from answers, gaps as `[ASK AUTHOR: ...]`, unconfirmed opinions as `[AUTHOR TO CONFIRM]`, a shape and opening different from the other letters, no checklist headings, no stock phrases, no em-dashes, 1.5 to 2.5 A4 sides. Save `letters/<slug>/draft.md` (and a .docx if the user wants one), with "DRAFT for <author> to rewrite in their own words" at the top.
+- **Draft** for the author to rewrite: give the quick heads-up from `rules.md` once. Follow `drafting.md`: only facts from answers, gaps as `[ASK AUTHOR: ...]`, unconfirmed opinions as `[AUTHOR TO CONFIRM]`, a shape and opening different from the other letters, no checklist headings, no stock phrases, no em-dashes, 1.5 to 2.5 A4 sides. Save `letters/<slug>/draft.md` (and a .docx if the user wants one), with "DRAFT for <author> to rewrite in their own words" at the top.
 
 ## Step 4: Check before handover
 

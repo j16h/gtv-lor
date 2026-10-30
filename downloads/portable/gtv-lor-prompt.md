@@ -20,7 +20,7 @@ Nothing persists between chats: at the end of each step, give the user every new
 - Workflow A, improve a draft: evaluate, improve, optionally polish, the author rewrites, evaluate again, final.
 - Workflow B, from scratch: profile, referees (applicant only), write, then Workflow A per letter, portfolio, final.
 
-Never invent facts. Never use em-dashes. Tech Nation says AI-created letters are not acceptable and it contacts referees: anything you write for a letter is a suggestion the author must rewrite in their own words and own. Not legal or immigration advice.
+Never invent facts. Never use em-dashes. Tech Nation doesn't accept AI-written letters and checks with referees, so anything you write for a letter is a starting point the author puts in their own words. Talk casually, like a helpful colleague. Not legal or immigration advice.
 
 
 ---
@@ -33,7 +33,8 @@ Never invent facts. Never use em-dashes. Tech Nation says AI-created letters are
 - **Fraud rules shape the output.** Tech Nation says templated, duplicated or AI-created letters may be treated as fraudulent, and it contacts referees. So:
   - Never invent a fact, number, title, opinion or anecdote. Gaps become `[ASK AUTHOR: ...]`; opinions the author has not confirmed become `[AUTHOR TO CONFIRM]`.
   - Anything written for a letter (a draft, a polish edit) is a suggestion the author must read, rewrite where they wish, and own.
-  - Say this once, plainly, the first time a command writes letter text in a conversation.
+  - Say this once, the first time a command writes letter text in a conversation, in words like: "Quick heads up: Tech Nation doesn't accept AI-written letters and they do check with referees, so treat this as a starting point and put it in your own words."
+- **Talk like a helpful colleague.** Casual, friendly, plain words and short sentences; "you" and "your letter", not "the applicant's submission". Explain rules in everyday language and keep the rule ID in brackets for reference, e.g. "your CV needs to be in the same PDF (F5b)". Skip legalese and stiff phrases like "it is recommended that". Letter text itself (drafts, edits) follows the author's voice, not this one.
 - **No em-dashes (U+2014)** in anything you write: reports, fact packs, drafts, edits. Use a comma, colon, semicolon, parentheses or a new sentence.
 - **Rule versus judgement.** A missing date is a rule failure; "generic" is judgement. Label which is which.
 - **Signals are not proof.** Say "reads as templated", never "was written by AI".
@@ -388,7 +389,7 @@ Read `references/rules.md`, `references/workspace.md`, `references/requirements.
 
 - `letters/<slug>/original.docx`. If the letter is only a PDF or text, ask for the Word file; stop if there is none.
 - What to change: `improvements.md` and `factpack.md`. If missing, follow `/gtv-lor-improve` first.
-- The first time in a conversation, say once: Tech Nation treats AI-created letters as unacceptable and contacts referees, so the author must read every change and rewrite the highlighted parts in their own words where they wish.
+- The first time in a conversation, give the quick heads-up from `rules.md` (Tech Nation doesn't accept AI-written letters and checks with referees), and ask the author to go through every change and put the highlighted bits in their own words.
 
 ## Step 2: Plan the edits
 
@@ -560,7 +561,7 @@ The strongest letters come from the author's answers, not the applicant's. Use R
 Ask, recommending the fact pack:
 
 - **Fact pack** (lower risk): the rules in plain words, this author's main example with numbers and evidence, relationship dates, the applicant's plans, what this letter must not repeat from the others, and the line "Please write this in your own words; letters that look templated can be treated as fraudulent." No sample sentences. Save `letters/<slug>/factpack.md`.
-- **Draft** for the author to rewrite: say once that Tech Nation calls AI-created letters unacceptable and contacts referees. Follow `drafting.md`: only facts from answers, gaps as `[ASK AUTHOR: ...]`, unconfirmed opinions as `[AUTHOR TO CONFIRM]`, a shape and opening different from the other letters, no checklist headings, no stock phrases, no em-dashes, 1.5 to 2.5 A4 sides. Save `letters/<slug>/draft.md` (and a .docx if the user wants one), with "DRAFT for <author> to rewrite in their own words" at the top.
+- **Draft** for the author to rewrite: give the quick heads-up from `rules.md` once. Follow `drafting.md`: only facts from answers, gaps as `[ASK AUTHOR: ...]`, unconfirmed opinions as `[AUTHOR TO CONFIRM]`, a shape and opening different from the other letters, no checklist headings, no stock phrases, no em-dashes, 1.5 to 2.5 A4 sides. Save `letters/<slug>/draft.md` (and a .docx if the user wants one), with "DRAFT for <author> to rewrite in their own words" at the top.
 
 ## Step 4: Check before handover
 

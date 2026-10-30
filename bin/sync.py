@@ -40,7 +40,27 @@ SCRIPTS = ["letter_check.py", "polish_docx.py"]
 RECOMMENDER_SET = ["gtv-lor", "gtv-lor-eval", "gtv-lor-improve", "gtv-lor-polish", "gtv-lor-final"]
 
 
+def check_frontmatter() -> None:
+    """Every SKILL.md: name matches its folder, description quoted, at most 500 chars, no angle brackets."""
+    import re
+    files = [(f, f.parent.name) for f in SKILLS.glob("*/SKILL.md")] + [(PLATFORMS / "bundle" / "SKILL.md", "gtv-lor")]
+    for f, folder in files:
+        fm = f.read_text().split("---", 2)[1]
+        name = re.search(r"^name: (.*)$", fm, re.M).group(1).strip()
+        desc = re.search(r"^description: (.*)$", fm, re.M).group(1).strip()
+        limit = 1024 if f.parent.name == "bundle" else 500
+        problems = [msg for bad, msg in [
+            (name != folder, f"name {name!r} does not match folder {folder!r}"),
+            (not (desc.startswith('"') and desc.endswith('"')), "description must be double-quoted"),
+            (len(desc) - 2 > limit, f"description is {len(desc) - 2} chars, limit {limit}"),
+            ("<" in fm or ">" in fm, "angle brackets in frontmatter"),
+        ] if bad]
+        if problems:
+            sys.exit(f"{f.relative_to(ROOT)}: " + "; ".join(problems))
+
+
 def main(check: bool) -> None:
+    check_frontmatter()
     stale = []
     for skill, files in MANIFEST.items():
         dest = SKILLS / skill

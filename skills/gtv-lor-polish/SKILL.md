@@ -1,6 +1,6 @@
 ---
 name: gtv-lor-polish
-description: Applies the agreed improvements to an existing UK Global Talent visa (Tech Nation) recommendation letter as Word tracked changes - insertions highlighted yellow, deletions tracked, a comment with the reason on every edit - so the author reviews, accepts, rejects or rewrites each one. Needs a .docx. Part of the gtv-lor suite. Use when the user types /gtv-lor-polish or asks to "polish", "edit" or "apply the fixes" to a Global Talent LOR. Do NOT use to write a letter from scratch (use /gtv-lor-write) or for other visas.
+description: "Applies agreed improvements to an existing UK Global Talent visa (Tech Nation) recommendation letter as Word tracked changes: new text highlighted, deletions tracked, a reason comment on each edit, so the author reviews and rewrites. Needs a .docx. Part of the gtv-lor suite. Use when the user types /gtv-lor-polish or asks to polish, edit or apply fixes to a Global Talent LOR. Not for writing from scratch (use /gtv-lor-write) or other visas."
 metadata:
   author: Julian Kalichman
   version: 3.0.0
@@ -14,7 +14,7 @@ Read `references/rules.md`, `references/workspace.md`, `references/requirements.
 
 - `letters/<slug>/original.docx`. If the letter is only a PDF or text, ask for the Word file; stop if there is none.
 - What to change: `improvements.md` and `factpack.md`. If missing, follow `/gtv-lor-improve` first.
-- The first time in a conversation, say once: Tech Nation treats AI-created letters as unacceptable and contacts referees, so the author must read every change and rewrite the highlighted parts in their own words where they wish.
+- The first time in a conversation, give the quick heads-up from `rules.md` (Tech Nation doesn't accept AI-written letters and checks with referees), and ask the author to go through every change and put the highlighted bits in their own words.
 
 ## Step 2: Plan the edits
 

@@ -1,6 +1,6 @@
 ---
 name: gtv-lor-portfolio
-description: Checks a UK Global Talent visa (Tech Nation) applicant's 3 recommendation letters as a set - distinct main examples, coverage of the chosen criteria, author mix and independence, consistent facts and plans, and textual overlap - and names the weakest letter and how to fix it. Part of the gtv-lor suite. Use when the user types /gtv-lor-portfolio or has 2 or 3 Global Talent LORs and asks whether they "work together", "overlap" or "cover the criteria". Do NOT use for other visas.
+description: "Checks a UK Global Talent visa (Tech Nation) applicant's 3 recommendation letters as a set - distinct main examples, coverage of the chosen criteria, author mix and independence, consistent facts and plans, and textual overlap - and names the weakest letter and how to fix it. Part of the gtv-lor suite. Use when the user types /gtv-lor-portfolio or has 2 or 3 Global Talent LORs and asks whether they \"work together\", \"overlap\" or \"cover the criteria\". Do NOT use for other visas."
 metadata:
   author: Julian Kalichman
   version: 3.0.0

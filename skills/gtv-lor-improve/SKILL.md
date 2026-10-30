@@ -1,6 +1,6 @@
 ---
 name: gtv-lor-improve
-description: Turns a scored UK Global Talent visa (Tech Nation) recommendation letter into a ranked list of changes and a fact pack for the author - what to add, cut or fix, with the rule behind each and the projected score. Asks the applicant or author for missing facts instead of inventing them. Part of the gtv-lor suite. Use when the user types /gtv-lor-improve or asks how to "improve", "strengthen" or "fix" a Global Talent LOR, or audits a brief sent to recommenders. Do NOT use for other visas.
+description: "Turns a scored UK Global Talent visa (Tech Nation) recommendation letter into a ranked list of changes and a fact pack for the author - what to add, cut or fix, with the rule behind each and the projected score. Asks the applicant or author for missing facts instead of inventing them. Part of the gtv-lor suite. Use when the user types /gtv-lor-improve or asks how to \"improve\", \"strengthen\" or \"fix\" a Global Talent LOR, or audits a brief sent to recommenders. Do NOT use for other visas."
 metadata:
   author: Julian Kalichman
   version: 3.0.0

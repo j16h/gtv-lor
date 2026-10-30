@@ -18,7 +18,7 @@ The strongest letters come from the author's answers, not the applicant's. Use R
 Ask, recommending the fact pack:
 
 - **Fact pack** (lower risk): the rules in plain words, this author's main example with numbers and evidence, relationship dates, the applicant's plans, what this letter must not repeat from the others, and the line "Please write this in your own words; letters that look templated can be treated as fraudulent." No sample sentences. Save `letters/<slug>/factpack.md`.
-- **Draft** for the author to rewrite: say once that Tech Nation calls AI-created letters unacceptable and contacts referees. Follow `drafting.md`: only facts from answers, gaps as `[ASK AUTHOR: ...]`, unconfirmed opinions as `[AUTHOR TO CONFIRM]`, a shape and opening different from the other letters, no checklist headings, no stock phrases, no em-dashes, 1.5 to 2.5 A4 sides. Save `letters/<slug>/draft.md` (and a .docx if the user wants one), with "DRAFT for <author> to rewrite in their own words" at the top.
+- **Draft** for the author to rewrite: give the quick heads-up from `rules.md` once. Follow `drafting.md`: only facts from answers, gaps as `[ASK AUTHOR: ...]`, unconfirmed opinions as `[AUTHOR TO CONFIRM]`, a shape and opening different from the other letters, no checklist headings, no stock phrases, no em-dashes, 1.5 to 2.5 A4 sides. Save `letters/<slug>/draft.md` (and a .docx if the user wants one), with "DRAFT for <author> to rewrite in their own words" at the top.
 
 ## Step 4: Check before handover
 

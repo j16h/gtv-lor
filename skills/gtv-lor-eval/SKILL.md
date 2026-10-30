@@ -1,6 +1,6 @@
 ---
 name: gtv-lor-eval
-description: Scores a UK Global Talent visa (Tech Nation) recommendation letter on a 1 to 5 scale against the GOV.UK and Tech Nation rules - pass/fail gates, eight weighted dimensions with quotes, authorship risk and a verdict. Part of the gtv-lor suite. Use when the user types /gtv-lor-eval or asks to "score", "evaluate", "assess", "rate" or "check" a Global Talent or Tech Nation LOR, including re-scoring a revised letter. Accepts .docx, .pdf, .md, .txt or pasted text. Do NOT use for other visas.
+description: "Scores a UK Global Talent visa (Tech Nation) recommendation letter on a 1 to 5 scale against the GOV.UK and Tech Nation rules - pass/fail gates, eight weighted dimensions with quotes, authorship risk and a verdict. Part of the gtv-lor suite. Use when the user types /gtv-lor-eval or asks to \"score\", \"evaluate\", \"assess\", \"rate\" or \"check\" a Global Talent or Tech Nation LOR, including re-scoring a revised letter. Accepts .docx, .pdf, .md, .txt or pasted text. Do NOT use for other visas."
 metadata:
   author: Julian Kalichman
   version: 3.0.0

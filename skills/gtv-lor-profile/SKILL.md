@@ -1,6 +1,6 @@
 ---
 name: gtv-lor-profile
-description: Interviews a UK Global Talent visa (Tech Nation) applicant, a few questions at a time, to build their profile - route, criteria, achievements with evidence, recognition, UK plans, passport name - which every other gtv-lor command uses for letters. Part of the gtv-lor suite. Use when the user types /gtv-lor-profile, is starting Global Talent recommendation letters from scratch, or wants to record or update the applicant's facts. Do NOT use for other visas.
+description: "Interviews a UK Global Talent visa (Tech Nation) applicant, a few questions at a time, to build their profile - route, criteria, achievements with evidence, recognition, UK plans, passport name - which every other gtv-lor command uses for letters. Part of the gtv-lor suite. Use when the user types /gtv-lor-profile, is starting Global Talent recommendation letters from scratch, or wants to record or update the applicant's facts. Do NOT use for other visas."
 metadata:
   author: Julian Kalichman
   version: 3.0.0

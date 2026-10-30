@@ -1,6 +1,6 @@
 ---
 name: gtv-lor-final
-description: Pre-submission checklist for UK Global Talent visa (Tech Nation) recommendation letters - every gate passes, one PDF with letter plus author CV, e-signature log kept, translations, dates, numbers matching evidence, and no overlap between the 3 letters. Part of the gtv-lor suite. Use when the user types /gtv-lor-final or says they are "about to submit", "ready to send" or wants a "final check" of Global Talent LORs. Do NOT use for other visas.
+description: "Pre-submission checklist for UK Global Talent visa (Tech Nation) recommendation letters - every gate passes, one PDF with letter plus author CV, e-signature log kept, translations, dates, numbers matching evidence, and no overlap between the 3 letters. Part of the gtv-lor suite. Use when the user types /gtv-lor-final or says they are \"about to submit\", \"ready to send\" or wants a \"final check\" of Global Talent LORs. Do NOT use for other visas."
 metadata:
   author: Julian Kalichman
   version: 3.0.0

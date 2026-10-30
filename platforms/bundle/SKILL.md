@@ -1,6 +1,6 @@
 ---
 name: gtv-lor
-description: All-in-one helper for UK Global Talent visa (Tech Nation, digital technology) letters of recommendation. Asks who you are and for your document, then scores a letter 1 to 5 against the GOV.UK and Tech Nation rules, ranks improvements, polishes a .docx with highlighted tracked changes, interviews the applicant and referees to write a letter or fact pack from scratch, checks the 3 letters as a set, and runs a final check. Use when the user mentions a Global Talent, GTV or Tech Nation recommendation letter or LOR, types /gtv-lor or any /gtv-lor- command, or asks to "score", "improve", "polish", "write" or "check" such a letter. Do NOT use for other visas or general job references.
+description: "All-in-one helper for UK Global Talent visa (Tech Nation, digital technology) letters of recommendation. Asks who you are and for your document, then scores a letter 1 to 5 against the GOV.UK and Tech Nation rules, ranks improvements, polishes a .docx with highlighted tracked changes, interviews the applicant and referees to write a letter or fact pack from scratch, checks the 3 letters as a set, and runs a final check. Use when the user mentions a Global Talent, GTV or Tech Nation recommendation letter or LOR, types /gtv-lor or any /gtv-lor- command, or asks to \"score\", \"improve\", \"polish\", \"write\" or \"check\" such a letter. Do NOT use for other visas or general job references."
 metadata:
   author: Julian Kalichman
   version: 3.1.0

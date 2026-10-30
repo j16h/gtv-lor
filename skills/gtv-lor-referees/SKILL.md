@@ -1,6 +1,6 @@
 ---
 name: gtv-lor-referees
-description: Helps a UK Global Talent visa (Tech Nation) applicant choose 3 recommendation letter authors - checks each is an established expert who has known their work for 12+ months, rates how independent they are, and assigns each a different main example so the letters do not overlap. Part of the gtv-lor suite. Use when the user types /gtv-lor-referees or asks "who should write my letters", "is X a good referee", or "can my advisor or manager write one" for a Global Talent application. Do NOT use for other visas.
+description: "Helps a UK Global Talent visa (Tech Nation) applicant pick 3 referees: checks each is an established expert who has known their work for 12+ months, rates independence, and gives each letter a different main example. Part of the gtv-lor suite. Use when the user types /gtv-lor-referees or asks who should write their letters, or whether an advisor or manager can write one. Not for other visas."
 metadata:
   author: Julian Kalichman
   version: 3.0.0

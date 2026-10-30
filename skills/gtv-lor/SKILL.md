@@ -1,6 +1,6 @@
 ---
 name: gtv-lor
-description: Start here for UK Global Talent visa (Tech Nation, digital technology) letters of recommendation. Asks who you are and for your document, sets up a workspace, shows progress, and routes to the right gtv-lor command. Two workflows - a recommender improving an existing letter (evaluate, improve, polish, final) and writing a letter from scratch (profile, referees, write). Use when the user types /gtv-lor, mentions a Global Talent, GTV or Tech Nation recommendation letter or LOR, or asks "where do I start", "which gtv-lor command". Do NOT use for other visas or general job references.
+description: "Start here for UK Global Talent visa (Tech Nation) recommendation letters. Asks your role and for your letter, sets up a workspace, shows progress and points to the next gtv-lor command. Two paths: a referee improving a draft (eval, improve, polish, final) or starting from scratch (profile, referees, write). Use when the user types /gtv-lor, mentions a Global Talent, GTV or Tech Nation LOR, or asks where to start. Not for other visas or general job references."
 metadata:
   author: Julian Kalichman
   version: 3.0.0
