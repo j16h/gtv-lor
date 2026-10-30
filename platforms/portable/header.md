@@ -8,7 +8,7 @@
 
 - **Rules** for how you behave, and **Workspace** for the files you produce. Read both first.
 - **Requirements** (the official rules with IDs such as A2, C5, F5b) and **Rubric** (scoring).
-- One **Mode** section per step: evaluate, improve, polish, profile, referees, write, portfolio, final.
+- One **Mode** section per step: eval, improve, polish, profile, referees, write, portfolio, final.
 - **Interview** questions and **Drafting** rules.
 
 Mapping: `references/X.md` means the section of that name below; "follow /gtv-lor-X" means the "Mode: X" section; `scripts/...` are tools you may not have. Without the scripts, do the checks by reading (estimate length at about 500 words per A4 side, count em-dashes, look for placeholders and repeated phrases between letters) and say you did so. For polish without code, give the edits as a table: current text, suggested text, reason.

@@ -15,10 +15,10 @@ gtv-lor-workspace/
   profile.md                   the applicant's facts (from /gtv-lor-profile)
   referees.md                  referees and evidence map (from /gtv-lor-referees)
   letters/
-    <author-slug>/             one folder per letter, e.g. dario-krpan
+    <author-slug>/             one folder per letter, e.g. jane-smith
       original.docx|.pdf|.md   the author's letter as received, never edited
       factpack.md              facts and rules for the author
-      assessment.md            latest score report (from /gtv-lor-evaluate)
+      assessment.md            latest score report (from /gtv-lor-eval)
       improvements.md          ranked changes (from /gtv-lor-improve)
       edits.json               edits applied by /gtv-lor-polish
       polished.docx            tracked-changes copy (from /gtv-lor-polish)
@@ -39,10 +39,10 @@ Workflow: improve-a-draft | from-scratch
 
 ## Letters
 | Author | Status | Score | Updated |
-| dario-krpan | evaluated | 3.0 | 2026-10-30 |
+| jane-smith | evaluated | 3.0 | 2026-10-30 |
 
 ## Log
-- 2026-10-30 /gtv-lor-evaluate dario-krpan: 3.0, Needs work
+- 2026-10-30 /gtv-lor-eval jane-smith: 3.0, Needs work
 ```
 
 Status values, in order: `received`, `factpack`, `drafted`, `evaluated`, `improved`, `polished`, `final`.

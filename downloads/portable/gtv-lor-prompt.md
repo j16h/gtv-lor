@@ -8,7 +8,7 @@
 
 - **Rules** for how you behave, and **Workspace** for the files you produce. Read both first.
 - **Requirements** (the official rules with IDs such as A2, C5, F5b) and **Rubric** (scoring).
-- One **Mode** section per step: evaluate, improve, polish, profile, referees, write, portfolio, final.
+- One **Mode** section per step: eval, improve, polish, profile, referees, write, portfolio, final.
 - **Interview** questions and **Drafting** rules.
 
 Mapping: `references/X.md` means the section of that name below; "follow /gtv-lor-X" means the "Mode: X" section; `scripts/...` are tools you may not have. Without the scripts, do the checks by reading (estimate length at about 500 words per A4 side, count em-dashes, look for placeholders and repeated phrases between letters) and say you did so. For polish without code, give the edits as a table: current text, suggested text, reason.
@@ -61,10 +61,10 @@ gtv-lor-workspace/
   profile.md                   the applicant's facts (from /gtv-lor-profile)
   referees.md                  referees and evidence map (from /gtv-lor-referees)
   letters/
-    <author-slug>/             one folder per letter, e.g. dario-krpan
+    <author-slug>/             one folder per letter, e.g. jane-smith
       original.docx|.pdf|.md   the author's letter as received, never edited
       factpack.md              facts and rules for the author
-      assessment.md            latest score report (from /gtv-lor-evaluate)
+      assessment.md            latest score report (from /gtv-lor-eval)
       improvements.md          ranked changes (from /gtv-lor-improve)
       edits.json               edits applied by /gtv-lor-polish
       polished.docx            tracked-changes copy (from /gtv-lor-polish)
@@ -85,10 +85,10 @@ Workflow: improve-a-draft | from-scratch
 
 ## Letters
 | Author | Status | Score | Updated |
-| dario-krpan | evaluated | 3.0 | 2026-10-30 |
+| jane-smith | evaluated | 3.0 | 2026-10-30 |
 
 ## Log
-- 2026-10-30 /gtv-lor-evaluate dario-krpan: 3.0, Needs work
+- 2026-10-30 /gtv-lor-eval jane-smith: 3.0, Needs work
 ```
 
 Status values, in order: `received`, `factpack`, `drafted`, `evaluated`, `improved`, `polished`, `final`.
@@ -269,9 +269,9 @@ Score the set, not just each letter, 1 to 5:
 
 ---
 
-# Section: Mode: evaluate (/gtv-lor-evaluate)
+# Section: Mode: eval (/gtv-lor-eval)
 
-# /gtv-lor-evaluate
+# /gtv-lor-eval
 
 Read `references/rules.md`, `references/workspace.md`, `references/requirements.md` and `references/rubric.md`.
 
@@ -344,7 +344,7 @@ Read `references/rules.md`, `references/workspace.md`, `references/requirements.
 
 ## Step 1: Load the score
 
-Use `letters/<slug>/assessment.md`. If it is missing or older than the letter, follow `/gtv-lor-evaluate` first (same conversation is fine).
+Use `letters/<slug>/assessment.md`. If it is missing or older than the letter, follow `/gtv-lor-eval` first (same conversation is fine).
 
 ## Step 2: Rank the changes
 
@@ -373,7 +373,7 @@ If the input is the applicant's note to recommenders rather than a letter, check
 
 ## Next
 
-"Next: rewrite in your own words, then `/gtv-lor-evaluate` to re-score. Or `/gtv-lor-polish` to see these changes as highlighted tracked edits in your .docx."
+"Next: rewrite in your own words, then `/gtv-lor-eval` to re-score. Or `/gtv-lor-polish` to see these changes as highlighted tracked edits in your .docx."
 
 
 ---
@@ -427,7 +427,7 @@ If an edit fails (text not found or found twice), fix its `old`, `after`, `ancho
 python3 scripts/letter_check.py letters/<slug>/polished.docx
 ```
 
-Confirm: within 3 sides, `em_dashes` is 0, no placeholders except deliberate `[ASK AUTHOR: ...]`. Read the accepted text once for repetition and dangling references. Score it with the `/gtv-lor-evaluate` rubric.
+Confirm: within 3 sides, `em_dashes` is 0, no placeholders except deliberate `[ASK AUTHOR: ...]`. Read the accepted text once for repetition and dangling references. Score it with the `/gtv-lor-eval` rubric.
 
 ## Step 5: Hand over
 
@@ -437,7 +437,7 @@ Update `workspace.md` (status `polished`, log line).
 
 ## Next
 
-"Next: after you've revised it, `/gtv-lor-evaluate` to re-score, then `/gtv-lor-final`."
+"Next: after you've revised it, `/gtv-lor-eval` to re-score, then `/gtv-lor-final`."
 
 
 ---
@@ -568,13 +568,13 @@ Ask, recommending the fact pack:
 python3 scripts/letter_check.py letters/<slug>/draft.md [other letters] --draft profile.md
 ```
 
-For a draft: score it with the `/gtv-lor-evaluate` rubric and revise until every content dimension is 4+ (D7 stays capped until the author rewrites it). Attach the "make it yours" checklist from `drafting.md`.
+For a draft: score it with the `/gtv-lor-eval` rubric and revise until every content dimension is 4+ (D7 stays capped until the author rewrites it). Attach the "make it yours" checklist from `drafting.md`.
 
 Update `workspace.md` (status `factpack` or `drafted`, log line).
 
 ## Next
 
-"Send it to <author>. When their letter comes back, run `/gtv-lor` to add it, then `/gtv-lor-evaluate`."
+"Send it to <author>. When their letter comes back, run `/gtv-lor` to add it, then `/gtv-lor-eval`."
 
 
 ---
@@ -587,7 +587,7 @@ Read `references/rules.md`, `references/workspace.md`, `references/requirements.
 
 ## Step 1: Gather
 
-All letters under `letters/*/` (latest revision of each), `profile.md`, `referees.md`. Each letter needs a current `assessment.md`; follow `/gtv-lor-evaluate` for any that lack one.
+All letters under `letters/*/` (latest revision of each), `profile.md`, `referees.md`. Each letter needs a current `assessment.md`; follow `/gtv-lor-eval` for any that lack one.
 
 ## Step 2: Mechanical overlap
 

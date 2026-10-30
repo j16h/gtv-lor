@@ -17,7 +17,7 @@ Each command lives in `modes/`. When the user types the command, says its plain 
 
 | Command | Mode file | Use it to |
 |---------|-----------|-----------|
-| `/gtv-lor-evaluate` | `modes/evaluate.md` | Score a letter 1 to 5 |
+| `/gtv-lor-eval` | `modes/eval.md` | Score a letter 1 to 5 |
 | `/gtv-lor-improve` | `modes/improve.md` | Ranked changes and a fact pack |
 | `/gtv-lor-polish` | `modes/polish.md` | Changes as highlighted tracked edits (.docx) |
 | `/gtv-lor-profile` | `modes/profile.md` | Capture the applicant's facts |

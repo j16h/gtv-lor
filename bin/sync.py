@@ -24,7 +24,7 @@ BASE = ["references/rules.md", "references/workspace.md"]
 CHECK = ["scripts/letter_check.py"]
 MANIFEST = {
     "gtv-lor": BASE,
-    "gtv-lor-evaluate": BASE + ["references/requirements.md", "references/rubric.md"] + CHECK,
+    "gtv-lor-eval": BASE + ["references/requirements.md", "references/rubric.md"] + CHECK,
     "gtv-lor-improve": BASE + ["references/requirements.md", "references/rubric.md"] + CHECK,
     "gtv-lor-polish": BASE + ["references/requirements.md", "references/rubric.md", "scripts/polish_docx.py"] + CHECK,
     "gtv-lor-final": BASE + ["references/requirements.md", "references/rubric.md"] + CHECK,
@@ -34,10 +34,10 @@ MANIFEST = {
                              "references/drafting.md"] + CHECK,
     "gtv-lor-portfolio": BASE + ["references/requirements.md", "references/rubric.md"] + CHECK,
 }
-MODES = ["evaluate", "improve", "polish", "profile", "referees", "write", "portfolio", "final"]
+MODES = ["eval", "improve", "polish", "profile", "referees", "write", "portfolio", "final"]
 REFS = ["rules", "workspace", "requirements", "rubric", "interview", "drafting"]
 SCRIPTS = ["letter_check.py", "polish_docx.py"]
-RECOMMENDER_SET = ["gtv-lor", "gtv-lor-evaluate", "gtv-lor-improve", "gtv-lor-polish", "gtv-lor-final"]
+RECOMMENDER_SET = ["gtv-lor", "gtv-lor-eval", "gtv-lor-improve", "gtv-lor-polish", "gtv-lor-final"]
 
 
 def main(check: bool) -> None:

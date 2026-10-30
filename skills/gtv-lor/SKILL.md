@@ -35,7 +35,7 @@ Ask for the letter if the role has one:
 
 > Add your letter: attach the file, give a path (.docx, .pdf, .md or .txt), or paste the text. A .docx is best: it is the only format `/gtv-lor-polish` can edit.
 
-- Ask for the author's name to make the slug (e.g. `dario-krpan`).
+- Ask for the author's name to make the slug (e.g. `jane-smith`).
 - Save it, unchanged, as `gtv-lor-workspace/letters/<slug>/original.<ext>` (pasted text: `original.md`).
 - Also invite: a fact pack or brief from the applicant, the applicant's CV or personal statement, other letters. Save them in the workspace (`letters/<slug>/factpack.md`, `profile.md`).
 
@@ -48,11 +48,11 @@ Show the workflow for their role, mark steps already done (from the Letters tabl
 **Workflow A: improve a draft** (recommender with a letter)
 
 ```
-/gtv-lor-evaluate   score it 1 to 5 against the rules
+/gtv-lor-eval       score it 1 to 5 against the rules
 /gtv-lor-improve    ranked changes, plus a fact pack of what to add
 /gtv-lor-polish     optional: the changes as highlighted tracked edits in your .docx
    (rewrite in your own words)
-/gtv-lor-evaluate   re-score your revision
+/gtv-lor-eval       re-score your revision
 /gtv-lor-final      pre-submission checklist
 ```
 
@@ -75,7 +75,7 @@ Then: "Next: run `/gtv-lor-<step>`." If the user prefers, continue straight into
 | Command | Use it to |
 |---------|-----------|
 | `/gtv-lor` | Start, add documents, see status |
-| `/gtv-lor-evaluate` | Score a letter 1 to 5 |
+| `/gtv-lor-eval` | Score a letter 1 to 5 |
 | `/gtv-lor-improve` | Get ranked changes and a fact pack |
 | `/gtv-lor-polish` | Apply changes as highlighted tracked edits (.docx) |
 | `/gtv-lor-profile` | Capture the applicant's facts |

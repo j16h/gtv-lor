@@ -45,7 +45,7 @@ If an edit fails (text not found or found twice), fix its `old`, `after`, `ancho
 python3 scripts/letter_check.py letters/<slug>/polished.docx
 ```
 
-Confirm: within 3 sides, `em_dashes` is 0, no placeholders except deliberate `[ASK AUTHOR: ...]`. Read the accepted text once for repetition and dangling references. Score it with the `/gtv-lor-evaluate` rubric.
+Confirm: within 3 sides, `em_dashes` is 0, no placeholders except deliberate `[ASK AUTHOR: ...]`. Read the accepted text once for repetition and dangling references. Score it with the `/gtv-lor-eval` rubric.
 
 ## Step 5: Hand over
 
@@ -55,4 +55,4 @@ Update `workspace.md` (status `polished`, log line).
 
 ## Next
 
-"Next: after you've revised it, `/gtv-lor-evaluate` to re-score, then `/gtv-lor-final`."
+"Next: after you've revised it, `/gtv-lor-eval` to re-score, then `/gtv-lor-final`."

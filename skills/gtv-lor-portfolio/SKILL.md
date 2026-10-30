@@ -12,7 +12,7 @@ Read `references/rules.md`, `references/workspace.md`, `references/requirements.
 
 ## Step 1: Gather
 
-All letters under `letters/*/` (latest revision of each), `profile.md`, `referees.md`. Each letter needs a current `assessment.md`; follow `/gtv-lor-evaluate` for any that lack one.
+All letters under `letters/*/` (latest revision of each), `profile.md`, `referees.md`. Each letter needs a current `assessment.md`; follow `/gtv-lor-eval` for any that lack one.
 
 ## Step 2: Mechanical overlap
 

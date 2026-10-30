@@ -4,7 +4,7 @@ Read `references/rules.md`, `references/workspace.md`, `references/requirements.
 
 ## Step 1: Load the score
 
-Use `letters/<slug>/assessment.md`. If it is missing or older than the letter, follow `/gtv-lor-evaluate` first (same conversation is fine).
+Use `letters/<slug>/assessment.md`. If it is missing or older than the letter, follow `/gtv-lor-eval` first (same conversation is fine).
 
 ## Step 2: Rank the changes
 
@@ -33,4 +33,4 @@ If the input is the applicant's note to recommenders rather than a letter, check
 
 ## Next
 
-"Next: rewrite in your own words, then `/gtv-lor-evaluate` to re-score. Or `/gtv-lor-polish` to see these changes as highlighted tracked edits in your .docx."
+"Next: rewrite in your own words, then `/gtv-lor-eval` to re-score. Or `/gtv-lor-polish` to see these changes as highlighted tracked edits in your .docx."

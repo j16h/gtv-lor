@@ -34,10 +34,10 @@ Ask, recommending the fact pack:
 python3 scripts/letter_check.py letters/<slug>/draft.md [other letters] --draft profile.md
 ```
 
-For a draft: score it with the `/gtv-lor-evaluate` rubric and revise until every content dimension is 4+ (D7 stays capped until the author rewrites it). Attach the "make it yours" checklist from `drafting.md`.
+For a draft: score it with the `/gtv-lor-eval` rubric and revise until every content dimension is 4+ (D7 stays capped until the author rewrites it). Attach the "make it yours" checklist from `drafting.md`.
 
 Update `workspace.md` (status `factpack` or `drafted`, log line).
 
 ## Next
 
-"Send it to <author>. When their letter comes back, run `/gtv-lor` to add it, then `/gtv-lor-evaluate`."
+"Send it to <author>. When their letter comes back, run `/gtv-lor` to add it, then `/gtv-lor-eval`."

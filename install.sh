@@ -9,7 +9,7 @@ target="${CLAUDE_SKILLS_DIR:-$HOME/.claude/skills}"
 mkdir -p "$target"
 
 if [[ "${1:-}" == "recommender" ]]; then
-  skills=(gtv-lor gtv-lor-evaluate gtv-lor-improve gtv-lor-polish gtv-lor-final)
+  skills=(gtv-lor gtv-lor-eval gtv-lor-improve gtv-lor-polish gtv-lor-final)
 else
   skills=()
   for d in "$root"/skills/*/; do skills+=("$(basename "$d")"); done

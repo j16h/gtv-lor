@@ -1,121 +1,248 @@
 # gtv-lor
 
-A suite of agent skills for letters of recommendation for the UK Global Talent visa, digital technology route (Tech Nation endorsement). Type `/gtv-lor` to start: it asks who you are, takes your document, sets up a workspace and tells you which command to run next.
+**Score, improve and write recommendation letters for the UK Global Talent visa (digital technology, Tech Nation).**
 
-## Two workflows
+gtv-lor is a set of AI assistant skills. Give it a letter and it checks it against the official GOV.UK and Tech Nation rules, scores it out of 5, tells you exactly what to change, and can mark those changes up in your Word file. Starting from nothing? It interviews you and prepares what each referee needs.
 
-**A. Improve a draft** (a recommender who has a letter)
+Works in **Claude**, **ChatGPT**, **Claude Code** and any other AI assistant.
+
+> [!IMPORTANT]
+> Tech Nation's guide says letters created with AI tools are **not acceptable**, that templated letters may be treated as fraudulent, and that it may **contact referees**. gtv-lor gives feedback and facts; anything it writes for a letter is a suggestion the author must read, rewrite in their own words and own.
+
+---
+
+## Contents
+
+- [Quick start](#quick-start)
+- [Which workflow is mine?](#which-workflow-is-mine)
+- [Commands](#commands)
+- [What you get](#what-you-get)
+- [Set up in detail](#set-up-in-detail)
+- [What it checks](#what-it-checks)
+- [Privacy](#privacy)
+- [FAQ](#faq)
+- [For maintainers](#for-maintainers)
+
+---
+
+## Quick start
+
+Pick the assistant you already use:
+
+| You use | Do this | Time |
+|---------|---------|------|
+| **Claude** (claude.ai, desktop or mobile) | Upload [gtv-lor.zip](https://github.com/j16h/gtv-lor/raw/main/downloads/claude-ai/gtv-lor.zip) as a skill ([steps](#claude)) | 2 min |
+| **ChatGPT** | Open the shared GPT link from whoever sent you here, or build it from [the kit](#chatgpt) | 1 to 10 min |
+| **Any other assistant** | Attach [gtv-lor-prompt.md](https://github.com/j16h/gtv-lor/raw/main/downloads/portable/gtv-lor-prompt.md) to a chat ([steps](#any-other-assistant)) | 1 min |
+| **Claude Code** | `git clone https://github.com/j16h/gtv-lor.git && ./gtv-lor/install.sh` | 1 min |
+
+Then start a chat, attach your letter, and type:
 
 ```
-/gtv-lor            add your letter
-/gtv-lor-evaluate   score it 1 to 5 against the GOV.UK and Tech Nation rules
-/gtv-lor-improve    ranked changes and a fact pack of what to add
-/gtv-lor-polish     optional: the changes as highlighted tracked edits in your .docx
-                    (rewrite in your own words)
-/gtv-lor-evaluate   re-score
-/gtv-lor-final      pre-submission checklist
+/gtv-lor
 ```
 
-**B. From scratch** (the applicant planning letters, or a recommender without a draft)
+It asks who you are, takes your document and tells you what to run next.
+
+---
+
+## Which workflow is mine?
+
+```mermaid
+flowchart TD
+    S["/gtv-lor"] --> Q{"Who are you?"}
+    Q -->|"Recommender with a draft"| A1
+    Q -->|"Applicant, or no draft yet"| B1
+
+    subgraph A ["A. Improve a draft"]
+        A1["/gtv-lor-eval<br/>score 1 to 5"] --> A2["/gtv-lor-improve<br/>ranked changes"]
+        A2 --> A3["/gtv-lor-polish<br/>optional: tracked edits"]
+        A3 --> A4["Author rewrites<br/>in their own words"]
+        A4 --> A5["/gtv-lor-eval<br/>re-score"]
+        A5 --> A6["/gtv-lor-final<br/>pre-submission check"]
+    end
+
+    subgraph B ["B. From scratch"]
+        B1["/gtv-lor-profile<br/>interview the applicant"] --> B2["/gtv-lor-referees<br/>pick 3 referees"]
+        B2 --> B3["/gtv-lor-write<br/>fact pack or draft"]
+        B3 --> B4["Referee writes the letter"]
+        B4 --> A1
+        A6 --> B5["/gtv-lor-portfolio<br/>check all 3 together"]
+    end
+```
+
+**A. You're a recommender with a draft letter**
+
+1. `/gtv-lor`: say "I'm a recommender with a draft", give the route and the applicant's passport name, attach your letter (a .docx is best) and any fact pack the applicant sent.
+2. `/gtv-lor-eval`: get a score out of 5, the rules it passes or fails, and the biggest gaps.
+3. `/gtv-lor-improve`: get the changes ranked by impact, plus a fact pack of what to add. It asks for missing facts rather than guessing.
+4. Rewrite in your own words, or run `/gtv-lor-polish` to see the changes as tracked edits in your .docx, then rewrite the highlighted parts.
+5. `/gtv-lor-eval` again, then sign (DocuSign or similar), put your CV in the same PDF, and run `/gtv-lor-final`.
+
+**B. You're the applicant, or nobody has a draft yet**
+
+1. `/gtv-lor`: say "I'm the applicant".
+2. `/gtv-lor-profile`: a short interview about your route, criteria, achievements, recognition and UK plans. Attach your CV to save time.
+3. `/gtv-lor-referees`: list who you're considering; it vets each one and gives each letter a different main example.
+4. `/gtv-lor-write`: for each referee, a fact pack (recommended) or a draft for them to rewrite.
+5. When the letters come back, each goes through workflow A; then `/gtv-lor-portfolio` checks the three as a set.
+
+---
+
+## Commands
+
+| Command | What it does | Workflow |
+|---------|--------------|:--------:|
+| `/gtv-lor` | Start here: asks your role, takes your document, shows progress | A, B |
+| `/gtv-lor-eval` | Scores a letter 1 to 5 with a quote behind every score | A |
+| `/gtv-lor-improve` | Ranked changes, the rule behind each, and a fact pack | A |
+| `/gtv-lor-polish` | Your .docx with the changes as tracked edits, new text highlighted, a reason on each | A |
+| `/gtv-lor-final` | Pre-submission checklist for every letter and the set | A |
+| `/gtv-lor-profile` | Interviews the applicant and records their facts | B |
+| `/gtv-lor-referees` | Vets referees and assigns each a distinct main example | B |
+| `/gtv-lor-write` | A fact pack or a draft for one referee | B |
+| `/gtv-lor-portfolio` | Checks the 3 letters together: overlap, coverage, consistency | B |
+
+In ChatGPT and other assistants you can also just type the word, for example "eval" or "polish".
+
+---
+
+## What you get
+
+**A score** (`/gtv-lor-eval`):
 
 ```
-/gtv-lor            set up
-/gtv-lor-profile    interview: route, criteria, achievements, UK plans
-/gtv-lor-referees   applicant: choose 3 referees, one main example each
-/gtv-lor-write      per referee: a fact pack (lower risk) or a draft to rewrite
-                    then Workflow A for each letter
-/gtv-lor-portfolio  check the 3 letters as a set
-/gtv-lor-final      pre-submission checklist
+Overall: 3.5 / 5, Good: minor fixes   (route: Exceptional Talent)
+Gates: 9 pass, 1 fail (G9: author's CV must be inside the same PDF)
+
+| Dimension                          | Score | Evidence                                    |
+| D2 Achievements (counts double)    | 4     | "led the rebuild ... from 40k to 2M users"  |
+| D3 Leadership and recognition (x2) | 4     | "invited to keynote ... 3,000 attendees"    |
+| D5 Contribution to UK tech         | 2     | "the UK is a great place for tech"          |
+...
+Biggest gaps
+1. Attach your CV in the same PDF and sign via DocuSign (G9)
+2. Name the UK institutions you have in mind (D4)
 ```
 
-Progress is saved in `gtv-lor-workspace/` in your current folder (Claude Code), so you can stop and pick up later. It holds personal data: keep it out of public repositories.
+**A polished Word file** (`/gtv-lor-polish`): a copy of your letter where every suggestion is a tracked change. New text is highlighted yellow, removed text is struck through, and a margin comment explains each one ("Rule: Tech Nation says MSc thesis research does not qualify..."). Your original is never touched. In Word, use Review, Accept or Reject.
 
-## Install
+**A fact pack** (`/gtv-lor-improve`, `/gtv-lor-write`): the facts, numbers and rule points the author needs, with no sample sentences, so the letter stays in their words.
 
-### Claude (claude.ai, desktop or mobile app): one upload
+---
+
+## Set up in detail
+
+### Claude
 
 1. Download [gtv-lor.zip](https://github.com/j16h/gtv-lor/raw/main/downloads/claude-ai/gtv-lor.zip). Don't unzip it.
-2. In Claude, open Settings, Capabilities and turn on **Code execution and file creation**.
+2. In Claude, open **Settings, Capabilities** and turn on **Code execution and file creation**.
 3. On the same page, under **Skills**, click **Upload skill** and choose `gtv-lor.zip`.
-4. Start a new chat, attach your letter and type `/gtv-lor` (or just say "score my Global Talent recommendation letter").
+4. Start a new chat, attach your letter and type `/gtv-lor`, or just say "score my Global Talent recommendation letter".
 
-This single skill contains every command. Nothing is saved between chats, so it offers each file (score, fact pack, polished .docx) as a download; attach them again when you continue.
+This one skill contains every command.
 
-### ChatGPT: a Custom GPT
+### ChatGPT
 
-Someone with ChatGPT Plus creates the GPT once and shares the link; anyone with the link can use it, including free users (with usage limits).
+One person with ChatGPT Plus builds the GPT once and shares the link. Anyone with the link can use it, including free users (with usage limits).
 
 1. Download [chatgpt-gpt-kit.zip](https://github.com/j16h/gtv-lor/raw/main/downloads/chatgpt-gpt-kit.zip) and unzip it.
-2. In ChatGPT, open Explore GPTs, Create, Configure.
-3. Fill in the fields from `gpt-settings.md`, paste the whole of `instructions.md` into Instructions, and upload every file in `knowledge/`.
-4. Turn on **Code Interpreter & Data Analysis** (needed for scoring checks and the polished .docx).
-5. Save with "Anyone with the link" and send the link to your recommenders.
+2. In ChatGPT, open **Explore GPTs, Create, Configure**.
+3. Copy the name, description and conversation starters from `gpt-settings.md`, paste all of `instructions.md` into **Instructions**, and upload every file in `knowledge/`.
+4. Turn on **Code Interpreter & Data Analysis**. It's needed for the checks and the polished .docx.
+5. Save as **Anyone with the link** and share the link with your recommenders.
 
-### Any other assistant (Gemini, Copilot, or Claude/ChatGPT without setup)
+### Any other assistant
 
-Download [gtv-lor-prompt.md](https://github.com/j16h/gtv-lor/raw/main/downloads/portable/gtv-lor-prompt.md), attach it to a new chat with your letter, and write: "Follow the instructions in gtv-lor-prompt.md. I'm a recommender with a draft letter." Without code execution it checks by reading, and gives polish suggestions as a table instead of a .docx.
+Works in Gemini, Copilot, or Claude and ChatGPT without any setup.
+
+1. Download [gtv-lor-prompt.md](https://github.com/j16h/gtv-lor/raw/main/downloads/portable/gtv-lor-prompt.md).
+2. Start a new chat, attach it and your letter, and write: *"Follow the instructions in gtv-lor-prompt.md. I'm a recommender with a draft letter."*
+
+Without code execution it checks by reading, and gives polish suggestions as a table (current text, suggested text, reason) instead of a .docx.
 
 ### Claude Code
 
 ```bash
 git clone https://github.com/j16h/gtv-lor.git
-./gtv-lor/install.sh
+./gtv-lor/install.sh              # all commands
+./gtv-lor/install.sh recommender  # or only workflow A
 ```
 
-`./gtv-lor/install.sh recommender` installs only Workflow A (for recommenders).
-
-This installs one skill per command, with the progress folder described above.
-
-## How to use
-
-### You're a recommender with a draft letter
-
-1. Open Claude Code in any folder (or a new chat on Claude.ai) and type `/gtv-lor`.
-2. Answer: "I'm a recommender and I have a draft letter", the route (Exceptional Talent or Exceptional Promise), and the applicant's name as in their passport.
-3. Add your letter: attach it, give a path such as `~/Documents/letter.docx`, or paste the text. If the applicant sent you a fact pack or brief, add it too.
-4. Type `/gtv-lor-evaluate`. You get a score out of 5, the rules it passes or fails, and the biggest gaps.
-5. Type `/gtv-lor-improve`. You get the changes ranked by impact and a fact pack of what to add. It asks you for any missing facts.
-6. Rewrite your letter in your own words. Or type `/gtv-lor-polish` to get a copy of your .docx with the changes as tracked edits (new text highlighted, a comment on each), then review them in Word (Review, Accept or Reject) and rewrite the highlighted parts.
-7. Add the revision and type `/gtv-lor-evaluate` again to re-score.
-8. Sign it (DocuSign or similar), put your CV in the same PDF, and type `/gtv-lor-final` for the last check.
-
-Example: "Score my letter for Yulian's Global Talent application, then show me what to improve."
-
-### You're the applicant, starting from scratch
-
-1. Type `/gtv-lor` and answer "I'm the applicant, planning my letters".
-2. Type `/gtv-lor-profile`. It interviews you a few questions at a time: route, criteria, achievements with evidence, recognition, UK plans. Attach your CV or personal statement to save time.
-3. Type `/gtv-lor-referees` and list the people you're considering. It checks each one and assigns each letter a different main example.
-4. Type `/gtv-lor-write` for each referee. Choose a fact pack (recommended) or a draft for them to rewrite, and send it to them.
-5. When each letter comes back, add it with `/gtv-lor` and the referee (or you) runs the recommender steps above.
-6. With all 3 letters in, type `/gtv-lor-portfolio` to check they work as a set, then `/gtv-lor-final`.
-
-Example: "Help me plan my 3 Global Talent letters. My referees might be my LSE supervisor, my CEO and a customer."
+Restart Claude Code and type `/gtv-lor`. Progress is saved in a `gtv-lor-workspace/` folder in the directory you work in, so you can stop and pick up later.
 
 ### Picking up later
 
-Type `/gtv-lor` at any time to see where each letter stands and what to run next. In Claude Code this reads `gtv-lor-workspace/`; on Claude.ai, attach the files the previous chat gave you.
+| Where | How |
+|-------|-----|
+| Claude Code | Type `/gtv-lor` in the same folder; it reads `gtv-lor-workspace/` |
+| Claude, ChatGPT, others | Nothing is saved between chats. Each step offers its files as downloads; attach them to the new chat and type `/gtv-lor` |
 
-## Rules it checks
+---
 
-Retrieved 2026-10-30 from [GOV.UK](https://www.gov.uk/global-talent-digital-technology/documents-you-need-to-apply-endorsement) and the [Tech Nation guide](https://technation-globaltalentvisa-guide.notion.site/). Check both before relying on them.
+## What it checks
 
-## A warning
+Rules come from [GOV.UK](https://www.gov.uk/global-talent-digital-technology/documents-you-need-to-apply-endorsement) and the [Tech Nation guide](https://technation-globaltalentvisa-guide.notion.site/), retrieved 2026-10-30. Check both before you rely on them; they change.
 
-Tech Nation's guide says using AI tools to create letters of reference is not acceptable, that templated or duplicated letters may be treated as fraudulent, and that it contacts referees. The fact pack is the lower-risk output. Anything this suite writes for a letter is a suggestion the author must read, rewrite in their own words where they wish, and own.
+**Pass or fail (any fail caps the score at 2):** the author is an established expert in digital technology, has known the applicant's work for 12+ months, wrote it for this application; the letter is dated, signed, up to 3 A4 sides, has phone and email, and comes with the author's CV in the same file.
 
-## Layout
+**Scored 1 to 5:**
+
+| Dimension | Weight |
+|-----------|:------:|
+| Author credibility and relationship | 1.5 |
+| Achievements in digital technology | 2 |
+| Leadership and recognition | 2 |
+| Benefit to the applicant of living in the UK | 1 |
+| Contribution to UK digital technology | 1 |
+| Future plans | 1 |
+| Sounds like the author (no templates, stock phrases or em-dashes) | 1.5 |
+| Claims match the evidence | 1 |
+
+**Across the 3 letters:** different main examples, the chosen criteria covered, independent authors, consistent facts, little shared wording.
+
+---
+
+## Privacy
+
+- Letters and profiles contain personal data. In Claude Code they stay in `gtv-lor-workspace/` on your machine; add it to `.gitignore` and never push it to a public repository.
+- In Claude, ChatGPT and other assistants, your files go to that provider under your account's terms.
+- gtv-lor never sends anything anywhere else.
+
+---
+
+## FAQ
+
+**Will it write the letter for me?**
+It can produce a draft, but the safer path is a fact pack the author writes from. Tech Nation says AI-created letters are not acceptable and contacts referees, so any draft or polish is a starting point the author must rewrite and own.
+
+**Does it need a .docx?**
+Only `/gtv-lor-polish` does, because it edits the Word file. Everything else accepts .docx, .pdf, .md, .txt or pasted text.
+
+**Exceptional Talent or Exceptional Promise?**
+Both. It asks at the start and checks the letter uses the right language for your route.
+
+**Is this legal advice?**
+No. It checks letters against published guidance. For your circumstances, speak to an immigration adviser.
+
+---
+
+## For maintainers
 
 ```
-skills/<name>/SKILL.md    one folder per command, self-contained
-shared/references/        rules, rubric, interview, drafting, workspace (source of truth)
-shared/scripts/           letter_check.py, polish_docx.py (stdlib only; pdftotext for PDFs)
+skills/<name>/SKILL.md    one folder per command, self-contained (Claude Code)
+shared/references/        rules, rubric, interview, drafting, workspace: the source of truth
+shared/scripts/           letter_check.py, polish_docx.py (Python stdlib; pdftotext for PDFs)
 platforms/                Claude.ai bundle skill, ChatGPT instructions, portable header
 downloads/                generated: Claude.ai zip, ChatGPT kit, portable prompt
-bin/sync.py               copies shared/ into each skill, builds dist/ zips and downloads/
+bin/sync.py               copies shared/ into each skill, builds dist/ and downloads/
 install.sh                links the skills into ~/.claude/skills
 ```
 
-Edit files in `shared/`, `skills/` or `platforms/`, then run `python3 bin/sync.py` and commit `downloads/` too. `python3 bin/sync.py --check` fails if any copy is stale.
+1. Edit `shared/`, `skills/` or `platforms/`.
+2. Run `python3 bin/sync.py`.
+3. Commit, including `downloads/`. `python3 bin/sync.py --check` fails if any skill copy is stale.
+
+---
 
 Not legal or immigration advice.
