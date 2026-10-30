@@ -32,7 +32,30 @@ Progress is saved in `gtv-lor-workspace/` in your current folder (Claude Code), 
 
 ## Install
 
-**Claude Code**
+### Claude (claude.ai, desktop or mobile app): one upload
+
+1. Download [gtv-lor.zip](https://github.com/j16h/gtv-lor/raw/main/downloads/claude-ai/gtv-lor.zip). Don't unzip it.
+2. In Claude, open Settings, Capabilities and turn on **Code execution and file creation**.
+3. On the same page, under **Skills**, click **Upload skill** and choose `gtv-lor.zip`.
+4. Start a new chat, attach your letter and type `/gtv-lor` (or just say "score my Global Talent recommendation letter").
+
+This single skill contains every command. Nothing is saved between chats, so it offers each file (score, fact pack, polished .docx) as a download; attach them again when you continue.
+
+### ChatGPT: a Custom GPT
+
+Someone with ChatGPT Plus creates the GPT once and shares the link; anyone with the link can use it, including free users (with usage limits).
+
+1. Download [chatgpt-gpt-kit.zip](https://github.com/j16h/gtv-lor/raw/main/downloads/chatgpt-gpt-kit.zip) and unzip it.
+2. In ChatGPT, open Explore GPTs, Create, Configure.
+3. Fill in the fields from `gpt-settings.md`, paste the whole of `instructions.md` into Instructions, and upload every file in `knowledge/`.
+4. Turn on **Code Interpreter & Data Analysis** (needed for scoring checks and the polished .docx).
+5. Save with "Anyone with the link" and send the link to your recommenders.
+
+### Any other assistant (Gemini, Copilot, or Claude/ChatGPT without setup)
+
+Download [gtv-lor-prompt.md](https://github.com/j16h/gtv-lor/raw/main/downloads/portable/gtv-lor-prompt.md), attach it to a new chat with your letter, and write: "Follow the instructions in gtv-lor-prompt.md. I'm a recommender with a draft letter." Without code execution it checks by reading, and gives polish suggestions as a table instead of a .docx.
+
+### Claude Code
 
 ```bash
 git clone https://github.com/j16h/gtv-lor.git
@@ -41,7 +64,7 @@ git clone https://github.com/j16h/gtv-lor.git
 
 `./gtv-lor/install.sh recommender` installs only Workflow A (for recommenders).
 
-**Claude.ai**: turn on Settings, Capabilities, Code execution and file creation. Build the zips with `python3 bin/sync.py` (or get them from whoever shared this with you), then upload each skill zip from `dist/` under Settings, Capabilities, Skills. Recommenders need only the five in `dist/gtv-lor-recommender-set.zip` (unzip it first: it holds one zip per skill).
+This installs one skill per command, with the progress folder described above.
 
 ## How to use
 
@@ -87,10 +110,12 @@ Tech Nation's guide says using AI tools to create letters of reference is not ac
 skills/<name>/SKILL.md    one folder per command, self-contained
 shared/references/        rules, rubric, interview, drafting, workspace (source of truth)
 shared/scripts/           letter_check.py, polish_docx.py (stdlib only; pdftotext for PDFs)
-bin/sync.py               copies shared/ into each skill and builds dist/ zips
+platforms/                Claude.ai bundle skill, ChatGPT instructions, portable header
+downloads/                generated: Claude.ai zip, ChatGPT kit, portable prompt
+bin/sync.py               copies shared/ into each skill, builds dist/ zips and downloads/
 install.sh                links the skills into ~/.claude/skills
 ```
 
-Edit files in `shared/`, then run `python3 bin/sync.py`. `python3 bin/sync.py --check` fails if any copy is stale.
+Edit files in `shared/`, `skills/` or `platforms/`, then run `python3 bin/sync.py` and commit `downloads/` too. `python3 bin/sync.py --check` fails if any copy is stale.
 
 Not legal or immigration advice.
