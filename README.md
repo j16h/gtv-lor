@@ -6,7 +6,7 @@
            | (_| | |_ \ V /_____| | (_) | |               
             \__, |\__| \_/      |_|\___/|_|               
             |___/                                         
-                                                          
+&nbsp;                                                         
  Get your Global Talent visa recommendation letters right.
 </pre>
 </div>
@@ -150,9 +150,9 @@ Start with `/gtv-lor`. It asks who you are and puts you on one of two paths.
        |  yes, I'm a referee                   |  no, or I'm the applicant   
        |                                       |                             
        v                                       v                             
-                                                                             
+&nbsp;                                                                            
   PATH A: improve a draft                 PATH B: start from scratch         
-                                                                             
+&nbsp;                                                                            
   [1] eval       score out of 5           [1] profile    tell it your story  
        |                                       |                             
   [2] improve    what to fix              [2] referees   pick 3 people       
