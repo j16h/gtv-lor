@@ -66,8 +66,7 @@ One upload gives you every command.
 
 <br>
 
-> [!TIP]
-> If someone sent you a link to the gtv-lor GPT, just open it. You're done.
+💡 **Got a link?** If someone sent you a link to the gtv-lor GPT, just open it. You're done.
 
 **Let ChatGPT walk you through building it** (needs ChatGPT Plus or higher). Paste this into a chat:
 
@@ -153,7 +152,7 @@ If the assistant can't run code, it checks by reading and gives suggestions as a
 Start with `/gtv-lor`. It asks who you are and puts you on one of two paths.
 
 ```mermaid
-flowchart LR
+flowchart TD
     S(["/gtv-lor"]) --> Q{"Got a draft?"}
     Q -->|"Yes, I'm the referee"| A1
     Q -->|"No / I'm the applicant"| B1
