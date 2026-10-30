@@ -6,6 +6,7 @@ It can:
 
 - **Assess** a letter on a 5-point scale against the GOV.UK and Tech Nation rules, with pass/fail gates and a weighted overall score.
 - **Improve** a letter: ranked changes and the projected score once they land.
+- **Polish** an existing .docx letter: suggested edits come back as Word tracked changes, highlighted, with a comment giving the reason for each.
 - **Draft** a letter or a fact pack by interviewing the candidate and the recommender.
 - **Check the set** of 3 letters for distinct examples, criteria coverage and textual overlap.
 - **Vet recommenders** and run a **final pre-submission check**.

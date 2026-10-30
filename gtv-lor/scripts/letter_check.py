@@ -48,6 +48,7 @@ def read_text(path: Path) -> str:
     if suffix == ".docx":
         with zipfile.ZipFile(path) as z:
             xml = z.read("word/document.xml").decode("utf8", "ignore")
+        xml = re.sub(r"<w:del\b[^/]*?>.*?</w:del>", "", xml, flags=re.S)  # read with tracked changes accepted
         xml = re.sub(r"</w:p>", "\n", xml)
         return re.sub(r"<[^>]+>", "", xml)
     if suffix == ".pdf":
