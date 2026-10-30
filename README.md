@@ -1,16 +1,14 @@
 <div align="center">
-
-```text
-       _              _                                   
-  __ _| |___   __    | | ___  _ __                        
- / _` | __\ \ / /____| |/ _ \| '__|                       
-| (_| | |_ \ V /_____| | (_) | |                          
- \__, |\__| \_/      |_|\___/|_|                          
- |___/                                                    
+<pre>
+                  _              _                        
+             __ _| |___   __    | | ___  _ __             
+            / _` | __\ \ / /____| |/ _ \| '__|            
+           | (_| | |_ \ V /_____| | (_) | |               
+            \__, |\__| \_/      |_|\___/|_|               
+            |___/                                         
                                                           
  Get your Global Talent visa recommendation letters right.
-```
-
+</pre>
 </div>
 
 <p align="center">
@@ -35,17 +33,18 @@ Writing (or asking for) a recommendation letter for the **UK Global Talent visa*
 
 ## Install
 
-Pick the assistant you already use. Each one comes with a **prompt you can paste** so your AI does the setup or walks you through it.
+Pick the assistant you already use and open its steps below. Each one comes with a **prompt you can paste** so your AI does the setup or walks you through it.
 
 | You use | Setup | Time |
 |---------|-------|:----:|
-| [Claude](#claude) (web, desktop, mobile) | Upload one zip | 2 min |
-| [ChatGPT](#chatgpt) | Open a shared GPT link, or build the GPT once | 1 to 10 min |
-| [Claude Code](#claude-code) | One terminal command | 1 min |
-| [Codex](#codex) | One terminal command | 1 min |
-| [Anything else](#anything-else) (Gemini, Copilot...) | Attach one file to a chat | 1 min |
+| **Claude** (web, desktop, mobile) | Upload one zip | 2 min |
+| **ChatGPT** | Open a shared GPT link, or build the GPT once | 1 to 10 min |
+| **Claude Code** | One terminal command | 1 min |
+| **Codex** | One terminal command | 1 min |
+| **Anything else** (Gemini, Copilot...) | Attach one file to a chat | 1 min |
 
-### Claude
+<details>
+<summary><b>Claude</b></summary>
 
 Paste this into a Claude chat and it'll walk you through it:
 
@@ -62,7 +61,10 @@ Or do it yourself:
 
 That one upload gives you all 9 skills.
 
-### ChatGPT
+</details>
+
+<details>
+<summary><b>ChatGPT</b></summary>
 
 Got a link to the gtv-lor GPT from someone? Just open it, you're done.
 
@@ -81,7 +83,10 @@ Or do it yourself:
 5. Switch on **Code Interpreter & Data Analysis**.
 6. Save as **Anyone with the link** and share it with your referees. Free accounts can use it too.
 
-### Claude Code
+</details>
+
+<details>
+<summary><b>Claude Code</b></summary>
 
 Paste this and Claude Code installs it:
 
@@ -99,7 +104,10 @@ git clone https://github.com/j16h/gtv-lor.git ~/.gtv-lor
 
 Restart Claude Code and type `/gtv-lor`. Your progress is saved in a `gtv-lor-workspace/` folder, so you can stop and come back.
 
-### Codex
+</details>
+
+<details>
+<summary><b>Codex</b></summary>
 
 Paste this and Codex installs it:
 
@@ -117,7 +125,10 @@ git clone https://github.com/j16h/gtv-lor.git ~/.gtv-lor
 
 Restart Codex and type `$gtv-lor`, or just ask for help with your Global Talent letter.
 
-### Anything else
+</details>
+
+<details>
+<summary><b>Anything else</b></summary>
 
 Gemini, Copilot, or Claude and ChatGPT with no setup at all:
 
@@ -130,13 +141,14 @@ Follow the instructions in gtv-lor-prompt.md. I'm a referee with a draft letter.
 
 If the assistant can't run code, it checks by reading and gives you suggestions as a list instead of a marked-up Word file.
 
+</details>
+
 ## How it works
 
 Start with `/gtv-lor`. It asks who you are and puts you on one of two paths.
 
 <div align="center">
-
-```text
+<pre>
                        /gtv-lor                                              
                            |                                                 
                   got a draft letter?                                        
@@ -160,8 +172,7 @@ Start with `/gtv-lor`. It asks who you are and puts you on one of two paths.
   [5] final      last check               [5] each letter goes through path A
                                                |                             
                                           [6] portfolio  check all 3 together
-```
-
+</pre>
 </div>
 
 **Path A, you've written a letter for someone:** attach it (Word is best) with anything the applicant sent you. `eval` scores it, `improve` lists what to change (asking for missing facts instead of making them up), `polish` marks up your Word file if you want, you rewrite in your own words, `eval` again, then sign, add your CV to the same PDF and run `final`.
