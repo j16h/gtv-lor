@@ -13,7 +13,7 @@
 <p align="center">
   <a href="#-install"><b>Install</b></a> &nbsp;&nbsp;
   <a href="#-how-it-works"><b>How it works</b></a> &nbsp;&nbsp;
-  <a href="#-commands"><b>Commands</b></a> &nbsp;&nbsp;
+  <a href="#-skills"><b>Skills</b></a> &nbsp;&nbsp;
   <a href="#-what-you-get"><b>What you get</b></a> &nbsp;&nbsp;
   <a href="#-faq"><b>FAQ</b></a>
 </p>
@@ -35,8 +35,8 @@ Pick the assistant you already use. Each one has a **one-line prompt** you can p
 |:-:|---------|-------|:----:|
 | 🟠 | **Claude** (web, desktop, mobile) | Upload one zip as a skill | 2 min |
 | 🟢 | **ChatGPT** | Open a shared GPT link, or build the GPT once | 1 to 10 min |
-| ⬛ | **Claude Code** | One command | 1 min |
-| ⬛ | **Codex** | One command | 1 min |
+| ⬛ | **Claude Code** | One terminal command | 1 min |
+| ⬛ | **Codex** | One terminal command | 1 min |
 | ⚪ | **Anything else** (Gemini, Copilot...) | Attach one file to a chat | 1 min |
 
 <details>
@@ -57,7 +57,7 @@ Help me install the gtv-lor skill. Read https://raw.githubusercontent.com/j16h/g
 3. Under **Skills**, click **Upload skill** and pick the zip.
 4. Start a new chat, attach your letter and type `/gtv-lor`.
 
-One upload gives you every command.
+One upload gives you all 9 skills.
 
 </details>
 
@@ -172,8 +172,6 @@ flowchart TD
         B3 --> B4["portfolio<br/>check all 3"]
     end
 
-    B3 -. "letters come back" .-> A1
-
     classDef start fill:#101727,stroke:#101727,color:#fff
     classDef stepA fill:#ecfdf5,stroke:#10b981,color:#064e3b
     classDef stepB fill:#eff6ff,stroke:#3b82f6,color:#1e3a8a
@@ -209,9 +207,11 @@ flowchart TD
 </tr>
 </table>
 
-## 🧰 Commands
+## 🧰 Skills
 
-| Command | What it does | Path |
+gtv-lor is 9 skills that work together. Run one by typing its name: `/gtv-lor-eval` in Claude and Claude Code, `$gtv-lor-eval` in Codex. You can also just ask ("score my letter") and the right skill kicks in.
+
+| Skill | What it does | Path |
 |---------|--------------|:----:|
 | `/gtv-lor` | Start here. Asks who you are, takes your letter, shows where you're at | A B |
 | `/gtv-lor-eval` | Scores a letter out of 5, quoting the bits behind each score | A |
@@ -224,7 +224,7 @@ flowchart TD
 | `/gtv-lor-portfolio` | Checks all 3 letters side by side | B |
 
 > [!NOTE]
-> In Codex, use `$` instead of `/` (for example `$gtv-lor-eval`). In ChatGPT and other assistants you can just type the word, like "eval" or "polish".
+> In ChatGPT and other assistants all 9 skills live in one GPT or file, so you can just type the word, like "eval" or "polish".
 
 ## 🎁 What you get
 
@@ -362,7 +362,7 @@ Nope. It checks letters against the published guidance. If your situation is tri
 <br>
 
 ```text
-skills/<name>/SKILL.md    one folder per command, each works on its own
+skills/<name>/SKILL.md    one folder per skill, each works on its own
 shared/references/        rules, rubric, interview, drafting, workspace: edit these
 shared/scripts/           letter_check.py, polish_docx.py (plain Python; pdftotext for PDFs)
 platforms/                Claude.ai bundle, ChatGPT instructions, portable header
