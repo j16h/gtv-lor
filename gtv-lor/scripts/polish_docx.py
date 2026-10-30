@@ -12,7 +12,8 @@ EDITS.json is a list of objects, applied in order:
 
   {"op": "replace", "old": "exact text", "new": "new text", "reason": "..."}
       "old" must occur exactly once in the document, inside one paragraph.
-      "new" may be "" to delete.
+      "new" may be "" to delete. Optional "context": a longer unique string
+      containing "old", used to target one of several identical matches.
   {"op": "insert", "after": "exact text", "text": "...", "reason": "..."}
       Inserts text right after "after" (unique, inside one paragraph), deleting nothing.
   {"op": "insert_after", "anchor": "text in a paragraph", "text": "...", "reason": "..."}
@@ -63,6 +64,7 @@ def esc(text: str) -> str:
 def run_text(run: str) -> str | None:
     """Text of a simple run, or None if the run holds anything but rPr + one w:t."""
     body = RPR_RE.sub("", run, count=1)
+    body = body.replace("<w:lastRenderedPageBreak/>", "")  # layout cache hint, safe to drop
     body = re.sub(r"^<w:r[^>]*>|</w:r>$", "", body)
     parts = T_RE.findall(body)
     if len(parts) != 1 or T_RE.sub("", body).strip():
@@ -112,11 +114,13 @@ def comment_parts(cid: int) -> tuple[str, str]:
     return start, end
 
 
-def replace_in_paragraph(para: str, old: str, new: str, ids: Ids, cid: int, keep_old: bool = False) -> str:
+def replace_in_paragraph(para: str, old: str, new: str, ids: Ids, cid: int, keep_old: bool = False,
+                         context: str | None = None) -> str:
     runs = [(m.start(), m.end(), m.group(0)) for m in RUN_RE.finditer(para)]
     texts = [visible_text(r[2]) for r in runs]
     full = "".join(texts)
-    start = full.index(old)
+    context = context or old
+    start = full.index(context) + context.index(old)
     end = start + len(old)
 
     pos = 0
@@ -204,8 +208,12 @@ def find_para(doc: str, needle: str) -> re.Match:
 def apply(doc: str, edit: dict, ids: Ids, cid: int) -> str:
     op = edit["op"]
     if op == "replace":
-        m = find_para(doc, edit["old"])
-        para = replace_in_paragraph(m.group(0), edit["old"], edit.get("new", ""), ids, cid)
+        context = edit.get("context", edit["old"])
+        if edit["old"] not in context:
+            raise EditError(f"context does not contain old: {edit['old'][:50]!r}")
+        m = find_para(doc, context)
+        para = replace_in_paragraph(m.group(0), edit["old"], edit.get("new", ""), ids, cid,
+                                    context=context)
         return doc[:m.start()] + para + doc[m.end():]
     if op == "insert":
         m = find_para(doc, edit["after"])

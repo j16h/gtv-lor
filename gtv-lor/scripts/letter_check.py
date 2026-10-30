@@ -95,6 +95,7 @@ def check(path: Path) -> dict:
         "time_anchors": [m.group(0) for m in YEARS_RE.finditer(text)][:8],
         "placeholders": PLACEHOLDER_RE.findall(text)[:10],
         "stock_phrases": [p for p in STOCK_PHRASES if p in lower],
+        "em_dashes": text.count("\u2014"),
         "numbers_cited": len(re.findall(r"\b\d[\d,.]*\s?(%|k|m|bn|million|billion|users|customers|£|\$)?", text)),
         "_text": text,
     }

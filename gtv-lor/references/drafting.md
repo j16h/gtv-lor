@@ -8,7 +8,7 @@ Read this before Mode 3. The draft is the **author's** letter built from the **a
 2. **Opinions come from the author.** Judgements ("the strongest product lead I have worked with") must be what the author said or would sign under questioning. If only the candidate answered, mark those sentences `[AUTHOR TO CONFIRM]`.
 3. **One letter, one main example.** Before drafting, write the evidence map (below) for all 3 letters so no headline example repeats (N2).
 4. **No shared skeleton.** Do not reuse the same section order, opening or closing across letters. Do not use the GOV.UK bullets as headings.
-5. **Plain, specific language.** No stock phrases from the rubric's D7 list. Prefer one anecdote with a number to three adjectives.
+5. **Plain, specific language.** No em-dashes (U+2014) anywhere; use commas, colons or new sentences. No stock phrases from the rubric's D7 list. Prefer one anecdote with a number to three adjectives.
 6. **Label it.** Put "DRAFT for [author] to rewrite in their own words" at the top of every draft.
 
 ## Evidence map (do this first)

@@ -65,7 +65,7 @@ Use the same anchors for every dimension:
 Quote what triggered each one. They are signals, not proof.
 
 - **Template**: placeholders; sections in the GOV.UK bullet order with the bullet wording reused as headings; phrases copied from the applicant's brief or draft (script overlap); identical sentences across letters.
-- **Machine-written feel**: stacked superlatives, "I am writing to wholeheartedly", "testament to", "unwavering", "in today's rapidly evolving landscape", triads everywhere, no anecdote, no hedging.
+- **Machine-written feel**: em-dashes (U+2014) used as connectors, stacked superlatives, "I am writing to wholeheartedly", "testament to", "unwavering", "in today's rapidly evolving landscape", triads everywhere, no anecdote, no hedging.
 - **Voice mismatch**: insider detail the author would not know; the applicant's own phrases; plans stated with a certainty only the applicant has.
 - **Inflation**: hyperbole ("150% of my time"), unbacked titles or numbers, UK-impact claims with no evidence.
 
