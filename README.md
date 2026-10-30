@@ -1,17 +1,28 @@
-```text
-       _              _
-  __ _| |___   __    | | ___  _ __
- / _` | __\ \ / /____| |/ _ \| '__|
-| (_| | |_ \ V /_____| | (_) | |
- \__, |\__| \_/      |_|\___/|_|
- |___/
+<div align="center">
 
+```text
+       _              _                                   
+  __ _| |___   __    | | ___  _ __                        
+ / _` | __\ \ / /____| |/ _ \| '__|                       
+| (_| | |_ \ V /_____| | (_) | |                          
+ \__, |\__| \_/      |_|\___/|_|                          
+ |___/                                                    
+                                                          
  Get your Global Talent visa recommendation letters right.
 ```
 
-**[Install](#install)** | **[How it works](#how-it-works)** | **[Skills](#skills)** | **[What you get](#what-you-get)** | **[What it checks](#what-it-checks)** | **[FAQ](#faq)**
+</div>
 
-Works in **Claude**, **ChatGPT**, **Claude Code**, **Codex** and pretty much any other AI assistant.
+<p align="center">
+  <a href="#install"><b>Install</b></a> |
+  <a href="#how-it-works"><b>How it works</b></a> |
+  <a href="#skills"><b>Skills</b></a> |
+  <a href="#what-you-get"><b>What you get</b></a> |
+  <a href="#what-it-checks"><b>What it checks</b></a> |
+  <a href="#faq"><b>FAQ</b></a>
+</p>
+
+<p align="center">Works in <b>Claude</b>, <b>ChatGPT</b>, <b>Claude Code</b>, <b>Codex</b> and pretty much any other AI assistant.</p>
 
 ---
 
@@ -123,31 +134,35 @@ If the assistant can't run code, it checks by reading and gives you suggestions 
 
 Start with `/gtv-lor`. It asks who you are and puts you on one of two paths.
 
+<div align="center">
+
 ```text
-                       /gtv-lor
-                           |
-                  got a draft letter?
-                           |
-       +-------------------+-------------------+
-       |                                       |
-       |  yes, I'm a referee                   |  no, or I'm the applicant
-       |                                       |
-       v                                       v
-
-  PATH A: improve a draft                 PATH B: start from scratch
-
-  [1] eval       score out of 5           [1] profile    tell it your story
-       |                                       |
-  [2] improve    what to fix              [2] referees   pick 3 people
-       |                                       |
-  [3] polish     marked-up Word file      [3] write      brief each one
-       |         (optional)                    |
-  [4] eval       score again              [4] referees write their letters
-       |                                       |
+                       /gtv-lor                                              
+                           |                                                 
+                  got a draft letter?                                        
+                           |                                                 
+       +-------------------+-------------------+                             
+       |                                       |                             
+       |  yes, I'm a referee                   |  no, or I'm the applicant   
+       |                                       |                             
+       v                                       v                             
+                                                                             
+  PATH A: improve a draft                 PATH B: start from scratch         
+                                                                             
+  [1] eval       score out of 5           [1] profile    tell it your story  
+       |                                       |                             
+  [2] improve    what to fix              [2] referees   pick 3 people       
+       |                                       |                             
+  [3] polish     marked-up Word file      [3] write      brief each one      
+       |         (optional)                    |                             
+  [4] eval       score again              [4] referees write their letters   
+       |                                       |                             
   [5] final      last check               [5] each letter goes through path A
-                                               |
+                                               |                             
                                           [6] portfolio  check all 3 together
 ```
+
+</div>
 
 **Path A, you've written a letter for someone:** attach it (Word is best) with anything the applicant sent you. `eval` scores it, `improve` lists what to change (asking for missing facts instead of making them up), `polish` marks up your Word file if you want, you rewrite in your own words, `eval` again, then sign, add your CV to the same PDF and run `final`.
 
@@ -159,61 +174,27 @@ gtv-lor is 9 skills that work together. Run one by typing its name, `/gtv-lor-ev
 
 | Skill | What it does | Path |
 |-------|--------------|:----:|
-| `gtv-lor` | Start here. Asks who you are, takes your letter, shows where you're at | A B |
-| `gtv-lor-eval` | Scores a letter out of 5, quoting the bits behind each score | A |
-| `gtv-lor-improve` | What to change and why, most important first | A |
-| `gtv-lor-polish` | Marks up your Word file with suggestions to accept or reject | A |
-| `gtv-lor-final` | One last check before you submit | A |
-| `gtv-lor-profile` | Gets the applicant's story down: wins, numbers, UK plans | B |
-| `gtv-lor-referees` | Helps choose referees and splits the topics between them | B |
-| `gtv-lor-write` | A brief for one referee (or a rough draft they rewrite) | B |
-| `gtv-lor-portfolio` | Checks all 3 letters side by side | B |
+| `/gtv-lor` | Start here. Asks who you are, takes your letter, shows where you're at | A B |
+| `/gtv-lor-eval` | Scores a letter out of 5, quoting the bits behind each score | A |
+| `/gtv-lor-improve` | What to change and why, most important first | A |
+| `/gtv-lor-polish` | Marks up your Word file with suggestions to accept or reject | A |
+| `/gtv-lor-final` | One last check before you submit | A |
+| `/gtv-lor-profile` | Gets the applicant's story down: wins, numbers, UK plans | B |
+| `/gtv-lor-referees` | Helps choose referees and splits the topics between them | B |
+| `/gtv-lor-write` | A brief for one referee (or a rough draft they rewrite) | B |
+| `/gtv-lor-portfolio` | Checks all 3 letters side by side | B |
 
 ## What you get
 
-**A score you can act on.** `gtv-lor-eval` scores 8 things, each backed by a quote from the letter, and flags any must-have you're missing:
+**A score you can act on.** `/gtv-lor-eval` scores 8 things, each backed by a quote from the letter, and flags any must-have you're missing:
 
-```text
-$ /gtv-lor-eval
+<p align="center"><img src="assets/score-card.svg" alt="Example score: 3.5 out of 5, with a dot rating for each of 8 parts and notes on what to fix" width="720"></p>
 
-  overall   3.5 / 5    Good: minor fixes         route: Exceptional Talent
-  rules     9 / 10     missing: your CV in the same PDF
+**Your letter, marked up.** `/gtv-lor-polish` hands back your Word file with every suggestion as a tracked change, plus a comment on each saying why. Your original stays untouched. In Word you just accept, reject or rewrite:
 
-  Achievements in digital tech    x2   [################....]  4
-  Leadership and recognition      x2   [################....]  4
-  Who the author is                    [############........]  3
-  Why the UK is good for you           [############........]  3
-  What you'll bring to UK tech         [########............]  2
-  Future plans                         [############........]  3
-  Sounds like a real person            [############........]  3
-  Claims match the evidence            [################....]  4
+<p align="center"><img src="assets/polish-preview.svg" alt="Example letter with highlighted additions, crossed-out deletions and margin comments" width="720"></p>
 
-  biggest gaps
-  1. Put your CV in the same PDF and sign with DocuSign
-  2. Say what exactly they'll do in the UK, not just that it's great
-```
-
-**Your letter, marked up.** `gtv-lor-polish` hands back your Word file with every suggestion as a tracked change, plus a comment on each saying why. Your original stays untouched. In Word you just accept, reject or rewrite:
-
-```text
-$ /gtv-lor-polish                 {+ added +}   [- removed -]   (n) comment
-
-  I have known Jane since 2022, when she joined our platform team.
-  We are co-authors on a paper [-currently under review-]
-  {+published in March 2026 after peer review.+}                     (1)
-
-  She led the rebuild of our data platform, taking it from 40k
-  to 2M users[-, which was a huge success-]{+.+} She plans to build
-  her company {+in London and hire there.+}                          (2)
-
-  ------------------------------------------------------------------
-  (1) Fact from your brief: the paper is out now. Checkable claims
-      score higher.
-  (2) Say what she'll do in the UK, not just that it's great. Put
-      it in your own words.
-```
-
-**A brief for each referee.** `gtv-lor-improve` and `gtv-lor-write` give the author the facts, numbers and rules they need, with no ready-made sentences, so the letter ends up in their voice.
+**A brief for each referee.** `/gtv-lor-improve` and `/gtv-lor-write` give the author the facts, numbers and rules they need, with no ready-made sentences, so the letter ends up in their voice.
 
 ## What it checks
 
@@ -263,7 +244,7 @@ Everything comes from the [GOV.UK page](https://www.gov.uk/global-talent-digital
 It can do a rough draft, but we'd steer you toward the brief instead. Tech Nation doesn't accept AI-written letters and does check with referees, so whatever it drafts, the author needs to rewrite in their own words.
 
 **Do I need a Word file?**
-Only for `gtv-lor-polish`, since that's the one that edits the file. Everything else is happy with Word, PDF, text or a paste.
+Only for `/gtv-lor-polish`, since that's the one that edits the file. Everything else is happy with Word, PDF, text or a paste.
 
 **Exceptional Talent or Exceptional Promise?**
 Either. It asks at the start and checks the letter talks about the applicant the right way for their route.
@@ -287,6 +268,7 @@ shared/references/        rules, rubric, interview, drafting, workspace: edit th
 shared/scripts/           letter_check.py, polish_docx.py (plain Python; pdftotext for PDFs)
 platforms/                Claude.ai bundle, ChatGPT instructions, portable header
 downloads/                generated: Claude.ai zip, ChatGPT kit, portable prompt
+assets/                   README images
 bin/sync.py               copies shared/ into each skill, rebuilds dist/ and downloads/
 install.sh                links the skills into Claude Code or Codex
 INSTALL.md                install steps written for AI agents

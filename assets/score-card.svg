@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400" role="img" aria-label="Example gtv-lor score: 3.5 out of 5, with a dot rating for each of 8 parts and two notes on what to fix">
+  <style>
+    .ui { font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; }
+    .row { font-size: 14px; fill: #1e293b; }
+    .num { font-size: 14px; font-weight: 700; fill: #1e293b; }
+    .on { fill: #1e293b; }
+    .off { fill: #e2e8f0; }
+  </style>
+  <rect x="1" y="1" width="798" height="398" rx="18" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="32" y="40" class="ui" font-size="14" font-weight="600" fill="#64748b">/gtv-lor-eval   your score, with a quote behind every part</text>
+
+  <!-- page -->
+  <rect x="32" y="60" width="500" height="312" rx="6" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="60" y="110" class="ui" font-size="38" font-weight="800" fill="#0f172a">3.5<tspan font-size="20" font-weight="600" style="fill:#94a3b8"> / 5</tspan></text>
+  <text x="168" y="102" class="ui" font-size="15" font-weight="600" fill="#047857">Good: minor fixes</text>
+  <text x="168" y="121" class="ui" font-size="13" fill="#64748b">Exceptional Talent route</text>
+  <line x1="60" y1="140" x2="504" y2="140" stroke="#f1f5f9" stroke-width="2"/>
+
+  <g class="ui">
+    <text x="60" y="170" class="row">Achievements (x2)</text>
+    <text x="60" y="196" class="row">Leadership and recognition (x2)</text>
+    <text x="60" y="222" class="row">Who the author is</text>
+    <text x="60" y="248" class="row">Why the UK is good for you</text>
+    <text x="60" y="274" class="row">What you'll bring to UK tech</text>
+    <text x="60" y="300" class="row">Future plans</text>
+    <text x="60" y="326" class="row">Sounds like a real person</text>
+    <text x="60" y="352" class="row">Claims match the evidence</text>
+  </g>
+
+  <!-- dots: 5 per row at x=380..460, filled = score -->
+  <g>
+    <g transform="translate(0 165)"><circle cx="390" cy="0" r="6" class="on"/><circle cx="410" cy="0" r="6" class="on"/><circle cx="430" cy="0" r="6" class="on"/><circle cx="450" cy="0" r="6" class="on"/><circle cx="470" cy="0" r="6" class="off"/></g>
+    <g transform="translate(0 191)"><circle cx="390" cy="0" r="6" class="on"/><circle cx="410" cy="0" r="6" class="on"/><circle cx="430" cy="0" r="6" class="on"/><circle cx="450" cy="0" r="6" class="on"/><circle cx="470" cy="0" r="6" class="off"/></g>
+    <g transform="translate(0 217)"><circle cx="390" cy="0" r="6" class="on"/><circle cx="410" cy="0" r="6" class="on"/><circle cx="430" cy="0" r="6" class="on"/><circle cx="450" cy="0" r="6" class="off"/><circle cx="470" cy="0" r="6" class="off"/></g>
+    <g transform="translate(0 243)"><circle cx="390" cy="0" r="6" class="on"/><circle cx="410" cy="0" r="6" class="on"/><circle cx="430" cy="0" r="6" class="on"/><circle cx="450" cy="0" r="6" class="off"/><circle cx="470" cy="0" r="6" class="off"/></g>
+    <g transform="translate(0 269)"><circle cx="390" cy="0" r="6" class="on"/><circle cx="410" cy="0" r="6" class="on"/><circle cx="430" cy="0" r="6" class="off"/><circle cx="450" cy="0" r="6" class="off"/><circle cx="470" cy="0" r="6" class="off"/></g>
+    <g transform="translate(0 295)"><circle cx="390" cy="0" r="6" class="on"/><circle cx="410" cy="0" r="6" class="on"/><circle cx="430" cy="0" r="6" class="on"/><circle cx="450" cy="0" r="6" class="off"/><circle cx="470" cy="0" r="6" class="off"/></g>
+    <g transform="translate(0 321)"><circle cx="390" cy="0" r="6" class="on"/><circle cx="410" cy="0" r="6" class="on"/><circle cx="430" cy="0" r="6" class="on"/><circle cx="450" cy="0" r="6" class="off"/><circle cx="470" cy="0" r="6" class="off"/></g>
+    <g transform="translate(0 347)"><circle cx="390" cy="0" r="6" class="on"/><circle cx="410" cy="0" r="6" class="on"/><circle cx="430" cy="0" r="6" class="on"/><circle cx="450" cy="0" r="6" class="on"/><circle cx="470" cy="0" r="6" class="off"/></g>
+  </g>
+  <g class="ui">
+    <text x="500" y="170" text-anchor="end" class="num">4</text>
+    <text x="500" y="196" text-anchor="end" class="num">4</text>
+    <text x="500" y="222" text-anchor="end" class="num">3</text>
+    <text x="500" y="248" text-anchor="end" class="num">3</text>
+    <text x="500" y="274" text-anchor="end" class="num">2</text>
+    <text x="500" y="300" text-anchor="end" class="num">3</text>
+    <text x="500" y="326" text-anchor="end" class="num">3</text>
+    <text x="500" y="352" text-anchor="end" class="num">4</text>
+  </g>
+
+  <!-- notes -->
+  <line x1="532" y1="112" x2="556" y2="112" stroke="#cbd5e1" stroke-width="1.5"/>
+  <rect x="556" y="72" width="212" height="96" rx="10" fill="#ffffff" stroke="#fecaca"/>
+  <text x="572" y="96" class="ui" font-size="12" font-weight="700" fill="#b91c1c">Must-have missing</text>
+  <text x="572" y="118" class="ui" font-size="13" fill="#334155">Put your CV in the same PDF</text>
+  <text x="572" y="136" class="ui" font-size="13" fill="#334155">and sign with DocuSign. 9 of</text>
+  <text x="572" y="154" class="ui" font-size="13" fill="#334155">10 must-haves pass.</text>
+
+  <line x1="508" y1="270" x2="556" y2="252" stroke="#cbd5e1" stroke-width="1.5"/>
+  <rect x="556" y="204" width="212" height="96" rx="10" fill="#ffffff" stroke="#c7d2fe"/>
+  <text x="572" y="228" class="ui" font-size="12" font-weight="700" fill="#4338ca">Biggest gap</text>
+  <text x="572" y="250" class="ui" font-size="13" fill="#334155">"The UK is a great place for</text>
+  <text x="572" y="268" class="ui" font-size="13" fill="#334155">tech." Say what she'll do here:</text>
+  <text x="572" y="286" class="ui" font-size="13" fill="#334155">a company, hires, partners.</text>
+
+  <text x="556" y="340" class="ui" font-size="12" fill="#64748b">Next: /gtv-lor-improve</text>
+</svg>
