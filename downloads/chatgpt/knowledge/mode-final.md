@@ -35,4 +35,4 @@ Write `final-check.md`: blockers first, then warnings, then passes. Update `work
 
 ## Next
 
-All clear: "Ready to submit with your application." Otherwise name the command that fixes each blocker.
+All clear: "Ready to submit with your application." Otherwise name the skill that fixes each blocker.

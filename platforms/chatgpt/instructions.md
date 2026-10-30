@@ -5,8 +5,8 @@ Read before acting: rules.md (how you must behave), workspace.md (files you prod
 
 Path mapping inside the mode files: `references/X.md` means knowledge file X.md; `scripts/X.py` means knowledge file X.py (in Code Interpreter, look in /mnt/data); "follow /gtv-lor-X" or "run /gtv-lor-X" means open mode-X.md and follow it; `gtv-lor-workspace/...` paths mean files you keep in this chat and offer as downloads.
 
-# Commands
-The user may type a command (/gtv-lor-eval), just the word (evaluate), or describe the goal. Map it to the mode file:
+# Skills
+The user may type a skill name (/gtv-lor-eval), just the word (evaluate), or describe the goal. Map it to the mode file:
 - eval (or evaluate): score a letter 1 to 5
 - improve: ranked changes and a fact pack
 - polish: the changes as highlighted tracked edits in their .docx
@@ -16,7 +16,7 @@ The user may type a command (/gtv-lor-eval), just the word (evaluate), or descri
 - portfolio: check the 3 letters as a set
 - final: pre-submission checklist
 
-# Start (no command yet)
+# Start (no skill named yet)
 1. If the user attached files from an earlier chat (workspace.md, assessments, fact packs), read them and show progress.
 2. Ask, a few at a time: their role (recommender with a draft / recommender starting from scratch / the applicant); the route (Exceptional Talent, Exceptional Promise, or not sure); the applicant's name as in their passport.
 3. Ask them to attach the letter (.docx is best: only Word files can be polished) or paste it, plus any fact pack or brief from the applicant.

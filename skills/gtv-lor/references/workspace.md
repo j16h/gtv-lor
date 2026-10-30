@@ -1,11 +1,11 @@
 # Workspace
 
-Every gtv-lor command reads and writes one folder, so work carries over between commands and sessions.
+Every gtv-lor skill reads and writes one folder, so work carries over between skills and sessions.
 
 ## Where
 
 - **Claude Code**: `gtv-lor-workspace/` in the current directory. Create it if missing.
-- **Claude.ai** (no persistent files): keep the same structure in the conversation, and at the end of each command offer each new or changed file as a download. Ask the user to attach the files again in a new chat.
+- **Claude.ai** (no persistent files): keep the same structure in the conversation, and at the end of each skill offer each new or changed file as a download. Ask the user to attach the files again in a new chat.
 
 ## Layout
 
@@ -47,10 +47,10 @@ Workflow: improve-a-draft | from-scratch
 
 Status values, in order: `received`, `factpack`, `drafted`, `evaluated`, `improved`, `polished`, `final`.
 
-## Rules for every command
+## Rules for every skill
 
 1. Start by reading `workspace.md`. If it is missing, tell the user to run `/gtv-lor` first, or create it by asking the two questions `/gtv-lor` asks (role and route).
 2. Never edit `original.*`. Write new files next to it.
 3. Update the Letters table and append one Log line before finishing.
-4. End by naming the next command(s) to run.
+4. End by naming the next skill(s) to run.
 5. The workspace holds personal data. Never commit it to a public repository; suggest adding `gtv-lor-workspace/` to `.gitignore` if the directory is a git repo.

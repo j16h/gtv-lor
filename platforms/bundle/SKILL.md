@@ -1,6 +1,6 @@
 ---
 name: gtv-lor
-description: "All-in-one helper for UK Global Talent visa (Tech Nation, digital technology) letters of recommendation. Asks who you are and for your document, then scores a letter 1 to 5 against the GOV.UK and Tech Nation rules, ranks improvements, polishes a .docx with highlighted tracked changes, interviews the applicant and referees to write a letter or fact pack from scratch, checks the 3 letters as a set, and runs a final check. Use when the user mentions a Global Talent, GTV or Tech Nation recommendation letter or LOR, types /gtv-lor or any /gtv-lor- command, or asks to \"score\", \"improve\", \"polish\", \"write\" or \"check\" such a letter. Do NOT use for other visas or general job references."
+description: "All-in-one helper for UK Global Talent visa (Tech Nation, digital technology) letters of recommendation. Asks who you are and for your document, then scores a letter 1 to 5 against the GOV.UK and Tech Nation rules, ranks improvements, polishes a .docx with highlighted tracked changes, interviews the applicant and referees to write a letter or fact pack from scratch, checks the 3 letters as a set, and runs a final check. Use when the user mentions a Global Talent, GTV or Tech Nation recommendation letter or LOR, types /gtv-lor or any gtv-lor skill name, or asks to \"score\", \"improve\", \"polish\", \"write\" or \"check\" such a letter. Do NOT use for other visas or general job references."
 metadata:
   author: Julian Kalichman
   version: 3.1.0
@@ -9,13 +9,13 @@ metadata:
 
 # gtv-lor (all-in-one)
 
-This single skill contains every gtv-lor command. Read `references/rules.md` and `references/workspace.md` first.
+This one upload contains all 9 gtv-lor skills, each as a mode file. Read `references/rules.md` and `references/workspace.md` first.
 
-## Commands
+## Skills
 
-Each command lives in `modes/`. When the user types the command, says its plain word ("evaluate", "polish"), or the flow below reaches it, read that file and follow it. Inside the mode files, "follow `/gtv-lor-<x>`" means read `modes/<x>.md`.
+Each skill lives in `modes/`. When the user types the skill name, says its plain word ("evaluate", "polish"), or the flow below reaches it, read that file and follow it. Inside the mode files, "follow `/gtv-lor-<x>`" means read `modes/<x>.md`.
 
-| Command | Mode file | Use it to |
+| Skill | Mode file | Use it to |
 |---------|-----------|-----------|
 | `/gtv-lor-eval` | `modes/eval.md` | Score a letter 1 to 5 |
 | `/gtv-lor-improve` | `modes/improve.md` | Ranked changes and a fact pack |
@@ -26,7 +26,7 @@ Each command lives in `modes/`. When the user types the command, says its plain 
 | `/gtv-lor-portfolio` | `modes/portfolio.md` | Check the 3 letters together |
 | `/gtv-lor-final` | `modes/final.md` | Pre-submission checklist |
 
-## Start (when no command is given)
+## Start (when no skill is named)
 
 1. **Where things stand.** If the user attached files from an earlier chat (`workspace.md`, assessments, fact packs), read them and show progress.
 2. **Ask** (a few at a time):

@@ -1,6 +1,6 @@
 ---
 name: gtv-lor
-description: "Start here for UK Global Talent visa (Tech Nation) recommendation letters. Asks your role and for your letter, sets up a workspace, shows progress and points to the next gtv-lor command. Two paths: a referee improving a draft (eval, improve, polish, final) or starting from scratch (profile, referees, write). Use when the user types /gtv-lor, mentions a Global Talent, GTV or Tech Nation LOR, or asks where to start. Not for other visas or general job references."
+description: "Start here for UK Global Talent visa (Tech Nation) recommendation letters. Asks your role and for your letter, sets up a workspace, shows progress and points to the next gtv-lor skill. Two paths: a referee improving a draft (eval, improve, polish, final) or starting from scratch (profile, referees, write). Use when the user types /gtv-lor, mentions a Global Talent, GTV or Tech Nation LOR, or asks where to start. Not for other visas or general job references."
 metadata:
   author: Julian Kalichman
   version: 3.0.0
@@ -43,7 +43,7 @@ Create `workspace.md` from the template in `references/workspace.md`. If the cur
 
 ## Step 4: Route
 
-Show the workflow for their role, mark steps already done (from the Letters table), and name the next command.
+Show the workflow for their role, mark steps already done (from the Letters table), and name the next skill.
 
 **Workflow A: improve a draft** (recommender with a letter)
 
@@ -68,11 +68,11 @@ then Workflow A for each letter
 /gtv-lor-final      pre-submission checklist
 ```
 
-Then: "Next: run `/gtv-lor-<step>`." If the user prefers, continue straight into that step in this conversation by following that command's instructions.
+Then: "Next: run `/gtv-lor-<step>`." If the user prefers, continue straight into that step in this conversation by following that skill's instructions.
 
-## Commands
+## Skills
 
-| Command | Use it to |
+| Skill | Use it to |
 |---------|-----------|
 | `/gtv-lor` | Start, add documents, see status |
 | `/gtv-lor-eval` | Score a letter 1 to 5 |
