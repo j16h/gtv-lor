@@ -33,18 +33,10 @@ Writing (or asking for) a recommendation letter for the **UK Global Talent visa*
 
 ## Install
 
-Pick the assistant you already use and open its steps below. Each one comes with a **prompt you can paste** so your AI does the setup or walks you through it.
-
-| You use | Setup | Time |
-|---------|-------|:----:|
-| **Claude** (web, desktop, mobile) | Upload one zip | 2 min |
-| **ChatGPT** | Open a shared GPT link, or build the GPT once | 1 to 10 min |
-| **Claude Code** | One terminal command | 1 min |
-| **Codex** | One terminal command | 1 min |
-| **Anything else** (Gemini, Copilot...) | Attach one file to a chat | 1 min |
+Pick the assistant you already use and click it to see the steps. Each one comes with a **prompt you can paste** so your AI does the setup or walks you through it.
 
 <details>
-<summary><b>Claude</b></summary>
+<summary><b>Claude</b> (web, desktop, mobile): upload one zip, 2 min</summary>
 
 Paste this into a Claude chat and it'll walk you through it:
 
@@ -64,7 +56,7 @@ That one upload gives you all 9 skills.
 </details>
 
 <details>
-<summary><b>ChatGPT</b></summary>
+<summary><b>ChatGPT</b>: open a shared GPT link, or build it once, 1 to 10 min</summary>
 
 Got a link to the gtv-lor GPT from someone? Just open it, you're done.
 
@@ -86,7 +78,7 @@ Or do it yourself:
 </details>
 
 <details>
-<summary><b>Claude Code</b></summary>
+<summary><b>Claude Code</b>: one terminal command, 1 min</summary>
 
 Paste this and Claude Code installs it:
 
@@ -107,7 +99,7 @@ Restart Claude Code and type `/gtv-lor`. Your progress is saved in a `gtv-lor-wo
 </details>
 
 <details>
-<summary><b>Codex</b></summary>
+<summary><b>Codex</b>: one terminal command, 1 min</summary>
 
 Paste this and Codex installs it:
 
@@ -128,7 +120,7 @@ Restart Codex and type `$gtv-lor`, or just ask for help with your Global Talent 
 </details>
 
 <details>
-<summary><b>Anything else</b></summary>
+<summary><b>Anything else</b> (Gemini, Copilot...): attach one file to a chat, 1 min</summary>
 
 Gemini, Copilot, or Claude and ChatGPT with no setup at all:
 
